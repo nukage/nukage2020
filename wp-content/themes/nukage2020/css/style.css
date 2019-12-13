@@ -1,0 +1,62 @@
+
+  
+
+
+
+/* FONTS */
+@import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&display=swap');
+
+.oswald {
+    font-family: "Oswald";
+}
+p {
+    margin-bottom:1rem;
+    font-weight:200;
+    /* line-height:2.5rem; */
+}
+
+body{
+    /* font-size:18px; */
+    text-rendering: geometricPrecision;
+}
+ 
+.bg-overlay {
+    background:rgba(0, 8, 144, 0.41);
+    /* background-image: url(../images/overlay-pattern3.png); */
+}
+.s1 {
+    /* background-image: url(../images/mixer.jpg) !important; */
+    background-attachment: fixed!important;
+    background-size: cover;
+    background-color:black;
+}
+
+.s1 .container {
+    /* max-width:1000px; */
+}
+
+.navbar {
+    border-bottom: rgba(222,34,92, .5) 1px solid;
+    background: rgba(0,0,0,.5);
+}
+
+.sign-up-nav-link {
+    color:rgba(222,34,92, 1) ;
+    border: rgba(222,34,92, 1) solid 1px ;
+}
+
+/* .quick-list-holder ul {
+    margin:0;padding:0;
+} */
+
+.quick-list-holder ul li{
+    padding:.5rem;
+    border: 1px solid rgba(255,255,255,.2);
+    font-weight: 100;
+
+}
+.quick-list-holder ul li span {
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
