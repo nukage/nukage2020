@@ -1,6 +1,36 @@
 var nukage;
 $(function () {
     nukage = {
+        gallery: function (){
+                // Init fancyBox
+                    $().fancybox({
+                        selector: ".element-item:visible > a",
+                        buttons : [
+                            'download',
+                            'thumbs',
+                            'close'
+                          ]
+                    });
+                    
+                    // Init Isotope
+                    var $grid = $(".grid").isotope({
+                        itemSelector: '.element-item',
+                        layoutMode: 'masonry'
+
+                        // options
+                    });
+                    
+                    // Filter items on button click
+                    $(".filter-button-group").on("click", "button", function() {
+                        $grid.isotope({ filter: $(this).attr("data-filter") });
+                    });
+                    $('.accordian-h3').click(function (e) {
+                        // console.log('HEYYYYY')
+                        $(".grid").isotope('layout');
+                    });
+                    
+
+        },
         faq: function () {
             // Initialize FAQ accordion
             // console.log('faq');
@@ -15,10 +45,11 @@ $(function () {
                 // }
             });
 
-            // $('.question').click(function (e) {
-            //     $('.bullet-circle').removeClass('open');
-            //     $(this).find($('.bullet-circle')).addClass('open');
-            // });
+            $('.accordian-h3').click(function (e) {
+                // $('.bullet-circle').removeClass('open');
+                // $(this).find($('.bullet-circle')).addClass('open');
+                // $grid('layout');
+            });
 
             // var incomingHash = location.hash;
             // // Deep anchor link for london faq page
@@ -51,6 +82,7 @@ $(function () {
     }
 
     nukage.faq();
+    nukage.gallery();
 
 });
 

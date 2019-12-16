@@ -631,6 +631,35 @@ video {
   }
 }
 
+html, body {
+  height:100%;
+  margin: 0;
+}
+
+php {
+  display: none;
+}
+
+.element-item{
+  width: 25%;
+}
+
+.body-wrapper{
+  margin-bottom:-4rem;
+  min-height: 100%;
+}
+
+footer {
+  border-top: rgba(222,34,92, .5) 1px solid;
+  height: 4rem;
+  /* background: rgba(0,0,0,.5); */
+}
+
+.footer-push {
+  height: 4rem;
+  width:100%;
+}
+
 .accordian-h3 {
   text-transform: uppercase;
   display: block;

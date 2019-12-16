@@ -1,6 +1,14 @@
-         
-        <!-- .body-wrapper -->
-        <!-- Js lib -->                  
+
+</div>
+            <div class="footer-push"></div>
+        </div>
         <?php wp_footer(); ?>
-    </body>
-</html>
+    </div>     
+    <footer>
+        <div class="container flex flex-row items-center h-full p-5 align-middle justify-center text-gray-700 text-xs">
+            <?php _e( '&copy; Copyright 2020 Nukage', 'nukage_2020' ); ?>
+        </div>
+    </footer>
+    <!-- .body-wrapper -->
+    <!-- Js lib -->          
+</body>
