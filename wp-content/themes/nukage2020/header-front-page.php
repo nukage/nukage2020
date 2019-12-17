@@ -15,7 +15,7 @@
                     <img class=" sm:h-10 h-6" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/nukage logo.png">
                 </div>
                 <div class="">
-                    <a href="#" class="sign-up-nav-link uppercase p-2 rounded-lg"><?php _e( 'Sign Up', 'nukage_2020' ); ?> <span class="md:inline hidden "><?php _e( 'For Updates', 'nukage_2020' ); ?></span></a>
+                    <a href="#" class="sign-up-nav-link uppercase p-2 rounded-lg hover:bg-risered hover:text-black "><?php _e( 'Sign Up', 'nukage_2020' ); ?> <span class="md:inline hidden "><?php _e( 'For Updates', 'nukage_2020' ); ?></span></a>
                 </div>
             </div>
         </div>

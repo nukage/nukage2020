@@ -172,4 +172,51 @@ class PG_Helper {
         }
         return $value;
     }
+
+    static function getBreadcrumbs( $type = 'parents', $add_home = false, $home_label = '' ) {
+        global $post;
+
+        $r = array();
+
+        if($type === 'parents') {
+            $parents = get_post_ancestors( $post->ID );
+            foreach($parents as $parent_id) {
+                $p = get_post( $parent_id );
+                $r[] = array(
+                    'name' => get_the_title( $p ),
+                    'link' => get_permalink( $p )
+                );
+            }
+        } else {
+            $category = get_the_category( $post->ID );
+
+            if(!empty($category)) {
+                $parents = get_ancestors($category[0]->term_id, 'category');
+
+                array_unshift( $parents, $category[0]->term_id );
+
+                foreach ($parents as $parent_id) {
+                    $p = get_category($parent_id);
+                    $r[] = array(
+                        'name' => $p->name,
+                        'link' => get_category_link($p)
+                    );
+                }
+            }
+        }
+
+        array_unshift($r, array(
+            'name' => get_the_title( $post ),
+            'link' => get_permalink( $post )
+        ));
+
+        if($add_home) {
+            $r[] = array(
+                'name' => $home_label,
+                'link' => home_url()
+            );
+        }
+
+        return array_reverse( $r );
+    }
 }

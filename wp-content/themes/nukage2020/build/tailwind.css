@@ -636,6 +636,10 @@ html, body {
   margin: 0;
 }
 
+a {
+  transition: all 300ms;
+}
+
 php {
   display: none;
 }
@@ -696,6 +700,29 @@ footer {
 
 h1, h2, h3, h4, h5 {
   color: #DE225C;
+}
+
+.modal-mc-bg {
+  background-color: rgba(0, 0, 0, 0.6);
+  display:none;
+}
+
+.press-item {
+  width: 50%;
+  margin-top: 1rem;
+  line-height: 2;
+}
+
+.press-item .inner {
+    border-width: 1px;
+    border-color: #2d3748;
+    padding: 1.25rem;
+  }
+
+@media  (min-width: 640px)  {
+  .press-item {
+    font-size: 1.125rem;
+  }
 }
 
 .sr-only {

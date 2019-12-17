@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php get_header( 'front-page' ); ?>
 
 <div class="bg-overlay ">
     <section id="quick-stats" class="px-5">
@@ -7,7 +7,7 @@
                 <img class="mx-auto" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/Nukage-Headshot.png">
             </div>
             <div class="md:w-2/3 w-full container flex flex-row quick-list-holder md:pl-16  text-lg flex-wrap ">
-                <div class="w-full"> 
+                <div class="w-full">
                     <h3 class="qs-title"><?php _e( 'Quick Stats', 'nukage_2020' ); ?></h3>
                 </div>
                 <div class="sm:w-1/2 w-full ">
@@ -33,7 +33,7 @@
                             <?php _e( '100+', 'nukage_2020' ); ?>
                         </li>
                         <li>
-                            <span><?php _e( 'Social Links:', 'nukage_2020' ); ?></span> 
+                            <span><?php _e( 'Social Links:', 'nukage_2020' ); ?></span>
                             <br> 
                             <?php _e( 'Instagram Facebook Youtube Soundcloud', 'nukage_2020' ); ?>
                         </li>
@@ -72,7 +72,9 @@
                         <li>
                             <span><?php _e( 'MEDIA NOTABLES:', 'nukage_2020' ); ?></span>
                             <br>
-                            <?php _e( 'EDM Artist Organizes NYC Electronic Music Community (Interview) | Demien Sixx & Nukage Release Latest Original – “Maximum Overdrive” | Your EDM Premiere: Archtekt & Nukage - Black Mass', 'nukage_2020' ); ?>
+                            <?php _e( 'EDM Artist Organizes NYC Electronic Music Community (Interview) | Demien Sixx &', 'nukage_2020' ); ?>
+                            <?php _e( 'Nukage Release Latest Original – “Maximum Overdrive” | Your EDM Premiere:', 'nukage_2020' ); ?>
+                            <?php _e( 'Archtekt & Nukage - Black Mass', 'nukage_2020' ); ?>
                         </li>
                     </ul>
                 </div>
@@ -80,7 +82,7 @@
         </div>
     </section>
     <section id="infoboxes">
-        <div class="accordion p-5 container mx-auto">
+        <div class="accordion p-3 container mx-auto">
             <?php  
             if (have_rows('flex1')) :
             while ( have_rows('flex1') ) : 
@@ -121,26 +123,145 @@
             <div class="grid flex flex-row flex-wrap justify-center">
                     <?php
                         if(have_rows('gallery')) :
-                        while( have_rows('gallery') ): the_row();      
-                                 $image = get_sub_field('image');
-                                 $caption = get_sub_field('caption'); 
-                                 $category = get_sub_field('category');
-                                 $class = ' element-item ' . $category ; 
-                                 $thumb_image = wp_get_attachment_image($image, 'gallery_thumb', " " , array( "draggable" => "false", "class" => "gallery-img" ) );
-                                 $full_image_url = wp_get_attachment_image_src($image, 'full' , false, '' );
+                        while( have_rows('gallery') ): the_row();
+                        $image = get_sub_field('image');
+                        $caption = get_sub_field('caption');
+                        $category = get_sub_field('category');
+                        $class = ' element-item ' . $category ;
+                        $thumb_image = wp_get_attachment_image($image, 'gallery_thumb', " " , array(
+                        "draggable" => "false", "class" => "gallery-img" ) );
+                        $full_image_url = wp_get_attachment_image_src($image, 'full' , false, '' );
                     ?>
                     <div class="<?php echo $class ?>">
                         <a href="<?php echo esc_url( $full_image_url[0] ); ?>" data-fancybox="images"> <?php echo $thumb_image  ?></a>
                     </div>
                 <?php endwhile;
 
-                                                                                                                                                                                                                                                                                                                                                                                               endif;
+                                                                                           endif;
                 ?>
                 </div>
             </div>
-        </div>
-    </section>                     
+            <h3 class="accordian-h3"><?php _e( 'Press &amp; Features', 'nukage_2020' ); ?></h3>
+            <div class="press flex flex-row flex-wrap">
+                <?php if ( have_rows('news_items') ) : 
+                                                                                   while( have_rows('news_items') ) : the_row(); 
+                ?>
+                    <div class="press-item   ">
+                        <div class="inner ">
+                            <h4 class="press-quote"><?php echo get_sub_field('quote') ?></h4>
+                            <a class="press-link italic hover:underline" href="<?php echo esc_url( get_sub_field('news_link') ); ?>" target="_blank"><?php echo get_sub_field('news_source') ?></a>
+                        </div>
+                    </div>
+                <?php endwhile;
+                                                                                   endif;
+                ?>
+                <div class="press-item    ">
+                    <div class="inner ">
+                        <h4 class="press-quote"><?php _e( '"Quote Goes Here"', 'nukage_2020' ); ?></h4>
+                        <a class="press-link italic hover:underline" href="#" target="_blank"><?php _e( '- This Song Slaps', 'nukage_2020' ); ?></a>
+                    </div>
+                </div>
+                <div class="press-item  ">
+                    <div class="inner ">
+                        <h4 class="press-quote"><?php _e( '"Quote Goes Here"', 'nukage_2020' ); ?></h4>
+                        <a class="press-link italic hover:underline" href="#" target="_blank"><?php _e( '- This Song Slaps', 'nukage_2020' ); ?></a>
+                    </div>
+                </div>
+            </div>
+        </div>                         
+
+        <!-- .accordion -->
+        <div class="accordion p-3 container mx-auto">
+            <?php  
+            if (have_rows('flex1')) :
+            while ( have_rows('flex1') ) : 
+            the_row(); if( get_row_layout() == 'accordion_group' ): 
+            if( have_rows('accordion') ):                                                                     
+            while ( have_rows('accordion') ) : 
+            the_row();
+             ?>
+            <h3 class="accordian-h3"><?php echo get_sub_field('title'); ?></h3>
+            <div class="sm:text-xl leading-loose  p-4">
+                <?php echo get_sub_field('body') ?>
+            </div>
+            <?php 
+
+            endwhile; 
+            endif; 
+            endif;
+            endwhile;
+            endif;
+
+             ?>
+            <h3 class="accordian-h3"><?php _e( 'Photo Gallery', 'nukage_2020' ); ?></h3>
+            <div class="gallery">
+                <div class="button-group filter-button-group">
+                    <button data-filter="*" class="btn">
+                        <?php _e( 'Show all', 'nukage_2020' ); ?>
+                    </button>
+                    <button data-filter=".headshot" class="btn">
+                        <?php _e( 'headshot', 'nukage_2020' ); ?>
+                    </button>
+                    <button data-filter=".live" class="btn">
+                        <?php _e( 'live', 'nukage_2020' ); ?>
+                    </button>
+                    <button data-filter=".press" class="btn">
+                        <?php _e( 'press', 'nukage_2020' ); ?>
+                    </button>
+                </div>
+            <div class="grid flex flex-row flex-wrap justify-center">
+                    <?php
+                        if(have_rows('gallery')) :
+                        while( have_rows('gallery') ): the_row();
+                        $image = get_sub_field('image');
+                        $caption = get_sub_field('caption');
+                        $category = get_sub_field('category');
+                        $class = ' element-item ' . $category ;
+                        $thumb_image = wp_get_attachment_image($image, 'gallery_thumb', " " , array(
+                        "draggable" => "false", "class" => "gallery-img" ) );
+                        $full_image_url = wp_get_attachment_image_src($image, 'full' , false, '' );
+                    ?>
+                    <div class="<?php echo $class ?>">
+                        <a href="<?php echo esc_url( $full_image_url[0] ); ?>" data-fancybox="images"> <?php echo $thumb_image  ?></a>
+                    </div>
+                <?php endwhile;
+
+                                                                                           endif;
+                ?>
+                </div>
+            </div>
+            <h3 class="accordian-h3"><?php _e( 'Press &amp; Features', 'nukage_2020' ); ?></h3>
+            <div class="press flex flex-row flex-wrap">
+                <?php if ( have_rows('news_items') ) : 
+                                                                                   while( have_rows('news_items') ) : the_row(); 
+                ?>
+                    <div class="press-item   ">
+                        <div class="inner ">
+                            <h4 class="press-quote"><?php echo get_sub_field('quote') ?></h4>
+                            <a class="press-link italic hover:underline" href="<?php echo esc_url( get_sub_field('news_link') ); ?>" target="_blank"><?php echo get_sub_field('news_source') ?></a>
+                        </div>
+                    </div>
+                <?php endwhile;
+                                                                                   endif;
+                ?>
+                <div class="press-item    ">
+                    <div class="inner ">
+                        <h4 class="press-quote"><?php _e( '"Quote Goes Here"', 'nukage_2020' ); ?></h4>
+                        <a class="press-link italic hover:underline" href="#" target="_blank"><?php _e( '- This Song Slaps', 'nukage_2020' ); ?></a>
+                    </div>
+                </div>
+                <div class="press-item  ">
+                    <div class="inner ">
+                        <h4 class="press-quote"><?php _e( '"Quote Goes Here"', 'nukage_2020' ); ?></h4>
+                        <a class="press-link italic hover:underline" href="#" target="_blank"><?php _e( '- This Song Slaps', 'nukage_2020' ); ?></a>
+                    </div>
+                </div>
+            </div>
+        </div>                         
+
+        <!-- .accordion -->
+    </section>
     <!-- .infoboxes -->
 </div>                
 
-<?php get_footer(); ?>
+<?php get_footer( 'front-page' ); ?>

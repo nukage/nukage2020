@@ -1,15 +1,9 @@
 var nukage;
 $(function () {
     nukage = {
+        
         gallery: function (){
-                                // Init Isotope
-                                var $grid = $(".grid").isotope({
-                                    itemSelector: '.element-item'
-                                    // layoutMode: 'masonry'
             
-                                    // options
-                                });
-                                
                 // Init fancyBox
                     $().fancybox({
                         selector: ".element-item:visible > a",
@@ -80,11 +74,46 @@ $(function () {
             //     $('.faq-list').removeClass('fade');
             // });
 
-        }
+        },
+        mainModal: function (elem, modalBG, btn, modalContent) {
+            // console.log('Malchimpmodal Loaded')
+            $(elem).on('click', function (e) {
+              e.preventDefault();
+              // console.log('partners');
+              $(modalBG)
+              .css('display', 'flex')
+              .hide()
+              .fadeIn(200);
+            });
+      
+            // CLOSE MODAL
+            // const btn = '.modal-close';
+            const modal = modalBG;
+           // const modalContent = '.modal-box';
+      
+            // close modals if click bg or x-button
+            $(modal).on('click', function (e) {
+              var clicked = $(e.target);
+              if (clicked.is($(btn)) || clicked.parents().is($(btn))) {
+                $(modal).fadeOut(200).promise().done(function () {
+                  $(this).removeAttr('style');
+                });
+      
+              // don't close if clicking around in the form or other modal content
+              } else if (clicked.is($(modalContent)) || clicked.parents().is($(modalContent))) {
+      
+              } else {
+                $(modal).fadeOut(200).promise().done(function () {
+                  $(this).removeAttr('style');
+                });
+              }
+            });
+          }
     }
 
     nukage.faq();
     nukage.gallery();
+    nukage.mainModal('.sign-up-nav-link', '.modal-mc-bg', '.modal-close', '.modal-mc');
 
 });
 
