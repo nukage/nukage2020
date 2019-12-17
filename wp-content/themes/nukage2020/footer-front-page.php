@@ -1,6 +1,5 @@
 
-                </div>
-            <?php endif; ?>
+            </div>
             <!-- .by-overlay -->
             <div class="footer-push"></div>
         </div>         

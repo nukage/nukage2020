@@ -79,99 +79,68 @@
             </div>
         </div>
     </section>
-    <?php if ( have_rows('flex1') ) : ?>
-        <section id="infoboxes">
-            <div class="accordion p-5 container mx-auto">
-                <?php  
-        while ( have_rows('flex1') ) : 
-
-        the_row(); if( get_row_layout() == 'accordion_group' ): 
-
-        if( have_rows('accordion') ): 
-
-        while ( have_rows('accordion') ) : 
-        the_row();
-         ?>
-                <h3 class="accordian-h3"><?php echo get_sub_field('title'); ?></h3>
-                <div class="sm:text-xl leading-loose  p-4">
-                    <?php echo get_sub_field('body') ?>
-                </div>
-                <?php 
-
-        endwhile; 
-        endif; 
-
-         ?>
-                <?php                                                 
-
-                elseif( get_row_layout() == 'gallery' ):               
-
-                $images = get_field('gallery');
-                $size = 'full'; // (thumbnail,medium, large, full or custom size)    
-
-
-                if( $images ):  
-
-
-
-                        ?>
-                <h3 class="accordian-h3"><?php _e( 'Gallery', 'nukage_2020' ); ?></h3>
-                <?php 
-
-        foreach( $images as $image_id ): ?>
-                <div class="gallery">
-                    <div class="button-group filter-button-group">
-                        <button data-filter="*" class="btn">
-                            <?php _e( 'Show all', 'nukage_2020' ); ?>
-                        </button>
-                        <button data-filter=".headshot" class="btn">
-                            <?php _e( 'headshot', 'nukage_2020' ); ?>
-                        </button>
-                        <button data-filter=".live" class="btn">
-                            <?php _e( 'live', 'nukage_2020' ); ?>
-                        </button>
-                        <button data-filter=".press" class="btn">
-                            <?php _e( 'press', 'nukage_2020' ); ?>
-                        </button>
-                    </div>
-                    <div class="grid flex flex-row flex-wrap justify-center">
-                        <div class="element-item headshot">
-                            <a href="images/gallery/MP303054_md.jpg" data-fancybox="images"> <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/gallery/MP303054_md.jpg" alt=""></a>
-                        </div>
-                        <div class="element-item live">
-                            <a href="images/gallery/MP303051_md.jpg" data-fancybox="images"> <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/gallery/MP303051_md.jpg" alt=""></a>
-                        </div>
-                        <div class="element-item headshot">
-                            <a href="images/gallery/MP303052_md.jpg" data-fancybox="images"> <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/gallery/MP303052_md.jpg" alt=""></a>
-                        </div>
-                        <div class="element-item live">
-                            <a href="images/gallery/MP303053_md.jpg" data-fancybox="images"> <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/gallery/MP303053_md.jpg" alt=""></a>
-                        </div>
-                        <div class="element-item press">
-                            <a href="images/gallery/MP303054_md.jpg" data-fancybox="images"> <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/gallery/MP303054_md.jpg" alt=""></a>
-                        </div>
-                        <div class="element-item live">
-                            <a href="images/gallery/MP303055_md.jpg" data-fancybox="images"> <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/gallery/MP303055_md.jpg" alt=""></a>
-                        </div>
-                        <div class="element-item press">
-                            <a href="images/gallery/MP303056_md.jpg" data-fancybox="images"> <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/gallery/MP303056_md.jpg" alt=""></a>
-                        </div>
-                        <div class="element-item live">
-                            <a href="images/gallery/MP303057_md.jpg" data-fancybox="images"> <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/gallery/MP303057_md.jpg" alt=""></a>
-                        </div>
-                    </div>
-                </div>
-                <?php  
-        endforeach;
-
-        endif;
-        endif;
-         ?>
+    <section id="infoboxes">
+        <div class="accordion p-5 container mx-auto">
+            <?php  
+            if (have_rows('flex1')) :
+            while ( have_rows('flex1') ) : 
+            the_row(); if( get_row_layout() == 'accordion_group' ): 
+            if( have_rows('accordion') ):                                                                     
+            while ( have_rows('accordion') ) : 
+            the_row();
+             ?>
+            <h3 class="accordian-h3"><?php echo get_sub_field('title'); ?></h3>
+            <div class="sm:text-xl leading-loose  p-4">
+                <?php echo get_sub_field('body') ?>
             </div>
-            <?php   endwhile ;  ?>
-        </section>
-    <?php endif; ?> 
+            <?php 
+
+            endwhile; 
+            endif; 
+            endif;
+            endwhile;
+            endif;
+
+             ?>
+            <h3 class="accordian-h3"><?php _e( 'Photo Gallery', 'nukage_2020' ); ?></h3>
+            <div class="gallery">
+                <div class="button-group filter-button-group">
+                    <button data-filter="*" class="btn">
+                        <?php _e( 'Show all', 'nukage_2020' ); ?>
+                    </button>
+                    <button data-filter=".headshot" class="btn">
+                        <?php _e( 'headshot', 'nukage_2020' ); ?>
+                    </button>
+                    <button data-filter=".live" class="btn">
+                        <?php _e( 'live', 'nukage_2020' ); ?>
+                    </button>
+                    <button data-filter=".press" class="btn">
+                        <?php _e( 'press', 'nukage_2020' ); ?>
+                    </button>
+                </div>
+            <div class="grid flex flex-row flex-wrap justify-center">
+                    <?php
+                        if(have_rows('gallery')) :
+                        while( have_rows('gallery') ): the_row();      
+                                 $image = get_sub_field('image');
+                                 $caption = get_sub_field('caption'); 
+                                 $category = get_sub_field('category');
+                                 $class = ' element-item ' . $category ; 
+                                 $thumb_image = wp_get_attachment_image($image, 'gallery_thumb', " " , array( "draggable" => "false", "class" => "gallery-img" ) );
+                                 $full_image_url = wp_get_attachment_image_src($image, 'full' , false, '' );
+                    ?>
+                    <div class="<?php echo $class ?>">
+                        <a href="<?php echo esc_url( $full_image_url[0] ); ?>" data-fancybox="images"> <?php echo $thumb_image  ?></a>
+                    </div>
+                <?php endwhile;
+
+                                                                                                                                                                                                                                                                                                                                                                                               endif;
+                ?>
+                </div>
+            </div>
+        </div>
+    </section>                     
     <!-- .infoboxes -->
-</div>                    
+</div>                
 
 <?php get_footer(); ?>

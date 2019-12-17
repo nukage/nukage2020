@@ -20,5 +20,4 @@
             </div>
         </div>
         <div class="body-wrapper pt-20">
-            <?php if ( class_exists('acf') ) : ?>
-                <div class="main-content">
+            <div class="main-content">

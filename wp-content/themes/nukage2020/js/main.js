@@ -2,6 +2,14 @@ var nukage;
 $(function () {
     nukage = {
         gallery: function (){
+                                // Init Isotope
+                                var $grid = $(".grid").isotope({
+                                    itemSelector: '.element-item'
+                                    // layoutMode: 'masonry'
+            
+                                    // options
+                                });
+                                
                 // Init fancyBox
                     $().fancybox({
                         selector: ".element-item:visible > a",
@@ -12,13 +20,7 @@ $(function () {
                           ]
                     });
                     
-                    // Init Isotope
-                    var $grid = $(".grid").isotope({
-                        itemSelector: '.element-item',
-                        layoutMode: 'masonry'
 
-                        // options
-                    });
                     
                     // Filter items on button click
                     $(".filter-button-group").on("click", "button", function() {

@@ -41,9 +41,10 @@ function nukage_2020_setup() {
 /*
     * Set image sizes
      */
-    /* Pinegrow generated Image sizes Begin */
+    /* Pinegrow generated Image Sizes Begin */
 
-    /* Pinegrow generated Image sizes End */
+    add_image_size( 'gallery_thumb', 500, 350, true );
+    /* Pinegrow generated Image Sizes End */
     
     /*
      * Switch default core markup for search form, comment form, and comments
@@ -106,8 +107,12 @@ function nukage_2020_custom_image_sizes_names( $sizes ) {
     /*
      * Add names of custom image sizes.
      */
-    /* Pinegrow generated Image Sizes Names Begin*/
-    /* This code will be replaced by returning names of custom image sizes. */
+    /* Pinegrow generated Image Sizes Names Begin */
+
+    return array_merge( $sizes, array(
+        'gallery_thumb' => __( 'Gallery Thumb' )
+    ) );
+
     /* Pinegrow generated Image Sizes Names End */
     return $sizes;
 }
@@ -157,12 +162,21 @@ if ( ! function_exists( 'nukage_2020_enqueue_scripts' ) ) :
     wp_deregister_script( 'jqueryui' );
     wp_enqueue_script( 'jqueryui', get_template_directory_uri() . '/js/jquery-ui.min.js', false, null, true);
 
+    wp_deregister_script( 'isotopepkgd' );
+    wp_enqueue_script( 'isotopepkgd', get_template_directory_uri() . '/js/isotope.pkgd.min.js', false, null, true);
+
+    wp_deregister_script( 'jqueryfancybox' );
+    wp_enqueue_script( 'jqueryfancybox', get_template_directory_uri() . '/js/jquery.fancybox.min.js', false, null, true);
+
     wp_deregister_script( 'main' );
     wp_enqueue_script( 'main', get_template_directory_uri() . '/js/main.js', false, null, true);
 
     /* Pinegrow generated Enqueue Scripts End */
 
         /* Pinegrow generated Enqueue Styles Begin */
+
+    wp_deregister_style( 'jqueryfancybox' );
+    wp_enqueue_style( 'jqueryfancybox', get_template_directory_uri() . '/css/jquery.fancybox.min.css', false, null, 'all');
 
     wp_deregister_style( 'tailwind' );
     wp_enqueue_style( 'tailwind', get_template_directory_uri() . '/build/tailwind.css', false, null, 'all');
