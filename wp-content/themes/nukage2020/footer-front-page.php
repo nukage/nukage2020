@@ -38,7 +38,6 @@
                                 <div class="response" id="mce-error-response" style="display:none"></div>
                                 <div class="response" id="mce-success-response" style="display:none"></div>
                             </div>                             
-
                             <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
                             <div style="position: absolute; left: -5000px;" aria-hidden="true">
                                 <input type="text" name="b_748d58fe44a6b6eb6bba2b7ae_9ce2d4839d" tabindex="-1" value="">
@@ -48,7 +47,7 @@
                             </div>
                     </div>
                 </form>
-            </div>             
+            </div>                          
             <!--End mc_embed_signup-->
         </div>
         <?php wp_footer(); ?>
@@ -69,6 +68,4 @@
 <script type="text/javascript" src="js/jquery.nav.js"></script>
 <script type="text/javascript" src="js/headroom.min.js"></script>
 <script type="text/javascript" src="js/skrollr.min.js"></script>
-<script type="text/javascript" src="js/mc-validate.js"></script>
-<script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
 <script type="text/javascript" src="js/main.js"></script>

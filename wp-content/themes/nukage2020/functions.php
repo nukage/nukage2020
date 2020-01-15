@@ -159,6 +159,10 @@ if ( ! function_exists( 'nukage_2020_enqueue_scripts' ) ) :
     wp_deregister_script( 'cdbaecd' );
     wp_enqueue_script( 'cdbaecd', 'https://kit.fontawesome.com/cd4b1a5ecd.js', false, null, false);
 
+    wp_deregister_script( 'mcvalidate' );
+    wp_enqueue_script( 'mcvalidate', get_template_directory_uri() . '/js/mc-validate.js', false, null, true);
+
+    wp_add_inline_script( 'mcvalidate', '(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]=\'EMAIL\';ftypes[0]=\'email\';fnames[1]=\'FNAME\';ftypes[1]=\'text\';fnames[2]=\'LNAME\';ftypes[2]=\'text\';fnames[3]=\'ADDRESS\';ftypes[3]=\'address\';fnames[4]=\'PHONE\';ftypes[4]=\'phone\';}(jQuery));var $mcj = jQuery.noConflict(true);');
     wp_deregister_script( 'jquery' );
     wp_enqueue_script( 'jquery', get_template_directory_uri() . '/js/jquery-3.4.1.min.js', false, null, true);
 
