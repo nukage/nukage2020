@@ -117,6 +117,47 @@ $(function () {
             // });
 
         },
+
+    textRotator: function () {
+      (function($){
+        $.fn.extend({ 
+            rotaterator: function(options) {
+     
+                var defaults = {
+                    fadeSpeed: 500,
+                    pauseSpeed: 100,
+            child:null
+                };
+                 
+                var options = $.extend(defaults, options);
+             
+                return this.each(function() {
+                      var o =options;
+                      var obj = $(this);                
+                      var items = $(obj.children(), obj);
+              items.each(function() {$(this).hide();})
+              if(!o.child){var next = $(obj).children(':first');
+              }else{var next = o.child;
+              }
+              $(next).fadeIn(o.fadeSpeed, function() {
+                $(next).delay(o.pauseSpeed).fadeOut(o.fadeSpeed, function() {
+                  var next = $(this).next();
+                  if (next.length == 0){
+                      next = $(obj).children(':first');
+                  }
+                  $(obj).rotaterator({child : next, fadeSpeed : o.fadeSpeed, pauseSpeed : o.pauseSpeed});
+                })
+              });
+                });
+            }
+        });
+    })(jQuery);
+    
+     $(document).ready(function() {
+            $('.rotator').rotaterator({fadeSpeed:500, pauseSpeed:3000});
+     });
+    }, 
+
         mainModal: function (elem, modalBG, btn, modalContent) {
             // console.log('Malchimpmodal Loaded')
             $(elem).on('click', function (e) {
@@ -127,7 +168,7 @@ $(function () {
               .hide()
               .fadeIn(200);
               $(modalContent).addClass('slide-in-blurred-bottom');
-              $(modalContent).removeClass('roll-out-bottom');             });
+              $(modalContent).removeClass('slide-out-blurred-top');             });
       
             // CLOSE MODAL
             // const btn = '.modal-close';
@@ -138,21 +179,20 @@ $(function () {
             $(modal).on('click', function (e) {
               var clicked = $(e.target);
               if (clicked.is($(btn)) || clicked.parents().is($(btn))) {
-                $(modal).fadeOut(200).promise().done(function () {
-                  $(this).removeAttr('style');
-                  $(modalContent).removeClass('slide-in-blurred-bottom');
- 
- 
-                 
+                $(modalContent).removeClass('slide-in-blurred-bottom');
+                $(modalContent).addClass('slide-out-blurred-top');  
+                $(modal).delay(300).fadeOut(200).promise().done(function () {
+                  $(modalBG).removeAttr('style');
                 });
       
               // don't close if clicking around in the form or other modal content
               } else if (clicked.is($(modalContent)) || clicked.parents().is($(modalContent))) {
       
               } else {
-                $(modal).fadeOut(200).promise().done(function () {
-                  $(this).removeAttr('style');
-                  $(modalContent).removeClass('slide-in-blurred-bottom');
+                $(modalContent).removeClass('slide-in-blurred-bottom');
+                $(modalContent).addClass('slide-out-blurred-top');  
+                $(modal).delay(300).fadeOut(200).promise().done(function () {
+                  $(modalBG).removeAttr('style');
                 });
               }
             });
@@ -166,6 +206,7 @@ $(function () {
     nukage.mainModal('.sign-up-nav-link', '.modal-mc-bg', '.modal-close', '.modal-mc');
     nukage.combinedScroll();
     nukage.headroom();
+    nukage.textRotator();
     // nukage.skrollr();
 
 

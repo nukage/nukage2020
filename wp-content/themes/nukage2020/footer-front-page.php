@@ -12,52 +12,63 @@
                     </div>
                     <h3 class="text-3xl uppercase font-black   text-center  "><?php _e( 'Sign Up', 'nukage_2020' ); ?></h3> 
                     <!-- Begin Mailchimp Signup Form -->
+                    <!-- <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css"> -->
                     <div id="mc_embed_signup">
-                        <form class="validate w-3/4 m-auto" action="https://nukage.us3.list-manage.com/subscribe/post?u=4c766702504e58545dacbb076&amp;id=7e4e3aa0cb" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                        <form action="https://nukagemusic.us17.list-manage.com/subscribe/post?u=748d58fe44a6b6eb6bba2b7ae&amp;id=9ce2d4839d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate w-3/4 m-auto" target="_blank" novalidate>
                             <div id="mc_embed_signup_scroll">
-                                <div class="indicates-required my-1">
+                                <!-- <h2>Subscribe</h2> -->
+                                <div class="indicates-required">
                                     <span class="asterisk">*</span> 
                                     <?php _e( 'indicates required', 'nukage_2020' ); ?>
                                 </div>
                                 <div class="mc-field-group">
-                                    <!-- <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
-                            </label> -->
-                                    <input type="email" value="" name="EMAIL" class="required email border border-gray-600  my-2 p-2 w-full bg-transparent text-white uppercase " id="mce-EMAIL" placeholder="Email *">
-                                </div>
-                                <div class="mc-field-group">
-                                    <!-- <label for="mce-FNAME">First Name </label> -->
-                                    <input type="text" value="" name="FNAME" class="border border-gray-600  my-2 p-2 w-full bg-transparent text-white uppercase" id="mce-FNAME" placeholder="First Name">
-                                </div>
-                                <div class="mc-field-group">
-                                    <!-- <label for="mce-LNAME">Last Name </label> -->
-                                    <input type="text" value="" name="LNAME" class=" border border-gray-600  my-2 p-2 w-full bg-transparent text-white uppercase" id="mce-LNAME" placeholder="Last Name">
-                                </div>
-                                <div id="mce-responses" class="clear">
-                                    <div class="response" id="mce-error-response" style="display:none"></div>
-                                    <div class="response" id="mce-success-response" style="display:none"></div>
-                                </div>                                 
-
-                                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                                <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                                    <input type="text" name="b_4c766702504e58545dacbb076_7e4e3aa0cb" tabindex="-1" value="">
-                                </div>
-                                <div class="clear">
-                                    <input type="submit" value="Submit" name="subscribe" id="mc-embedded-subscribe" class="button w-full border border-risered my-1 p-2 bg-transparent text-white uppercase text-risered hover:text-black hover:bg-risered cursor-pointer trans">
-                                </div>
+                                    <!-- <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span> -->
+                                </label>
+                                <input type="email" value="" name="EMAIL" class="required email border border-gray-600  my-2 p-2 w-full bg-transparent text-white uppercase " id="mce-EMAIL" placeholder="Email *">
                             </div>
-                        </form>
+                            <div class="mc-field-group">
+                                <!-- <label for="mce-FNAME">First Name </label> -->
+                                <input type="text" value="" name="FNAME" class="border border-gray-600  my-2 p-2 w-full bg-transparent text-white uppercase" id="mce-FNAME" placeholder="First Name">
+                            </div>
+                            <div class="mc-field-group">
+                                <!-- <label for="mce-LNAME">Last Name </label> -->
+                                <input type="text" value="" name="LNAME" class=" border border-gray-600  my-2 p-2 w-full bg-transparent text-white uppercase" id="mce-LNAME" placeholder="Last Name">
+                            </div>
+                            <div id="mce-responses" class="clear">
+                                <div class="response" id="mce-error-response" style="display:none"></div>
+                                <div class="response" id="mce-success-response" style="display:none"></div>
+                            </div>                             
+
+                            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                            <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                                <input type="text" name="b_748d58fe44a6b6eb6bba2b7ae_9ce2d4839d" tabindex="-1" value="">
+                            </div>
+                            <div class="clear">
+                                <input type="submit" value="Submit" name="subscribe" id="mc-embedded-subscribe" class="button w-full border border-risered my-1 p-2 bg-transparent text-white uppercase text-risered hover:text-black hover:bg-risered cursor-pointer trans">
+                            </div>
                     </div>
-                    <!--End mc_embed_signup-->
-                </div>
-            </div>
+                </form>
+            </div>             
+            <!--End mc_embed_signup-->
         </div>
-        <footer>
-            <div class="container mx-auto flex flex-row items-center h-full p-5 align-middle justify-center text-gray-700 text-xs">
-                <?php _e( '&copy; Copyright 2020 Nukage', 'nukage_2020' ); ?>
-            </div>
-        </footer>
-        <!-- .body-wrapper -->
-        <!-- Js lib -->
-        <!-- <script type="text/javascript" src="js/jquery.combinedScroll.js"></script> -->
         <?php wp_footer(); ?>
-    </body>
+    </div>
+</div>
+<footer>
+    <div class="container mx-auto flex flex-row items-center h-full p-5 align-middle justify-center text-gray-700 text-xs">
+        <?php _e( '&copy; Copyright 2020 Nukage', 'nukage_2020' ); ?>
+    </div>
+</footer>
+<!-- .body-wrapper -->
+<!-- Js lib -->
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/isotope.pkgd.min.js"></script>
+<script type="text/javascript" src="js/jquery.fancybox.min.js"></script>
+<!-- <script type="text/javascript" src="js/jquery.combinedScroll.js"></script> -->
+<script type="text/javascript" src="js/jquery.nav.js"></script>
+<script type="text/javascript" src="js/headroom.min.js"></script>
+<script type="text/javascript" src="js/skrollr.min.js"></script>
+<script type="text/javascript" src="js/mc-validate.js"></script>
+<script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+<script type="text/javascript" src="js/main.js"></script>

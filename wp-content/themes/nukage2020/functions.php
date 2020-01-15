@@ -171,15 +171,6 @@ if ( ! function_exists( 'nukage_2020_enqueue_scripts' ) ) :
     wp_deregister_script( 'jqueryfancybox' );
     wp_enqueue_script( 'jqueryfancybox', get_template_directory_uri() . '/js/jquery.fancybox.min.js', false, null, true);
 
-    wp_deregister_script( 'jquerynav' );
-    wp_enqueue_script( 'jquerynav', get_template_directory_uri() . '/js/jquery.nav.js', false, null, true);
-
-    wp_deregister_script( 'headroom' );
-    wp_enqueue_script( 'headroom', get_template_directory_uri() . '/js/headroom.min.js', false, null, true);
-
-    wp_deregister_script( 'skrollr' );
-    wp_enqueue_script( 'skrollr', get_template_directory_uri() . '/js/skrollr.min.js', false, null, true);
-
     wp_deregister_script( 'main' );
     wp_enqueue_script( 'main', get_template_directory_uri() . '/js/main.js', false, null, true);
 

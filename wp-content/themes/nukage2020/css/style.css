@@ -22,21 +22,21 @@
   }
 
   .videos-bg{
-    background-image: url('../images/gradientbg7.jpg')
+    background-image: url('../images/gradientbg7.jpg');
   }
 .photos-bg{
-    background-image: url('../images/nukage-gradientbg5.jpg')
+    background-image: url('../images/nukage-gradientbg5.jpg');
    
 }
  
 
 .qs-bg {
-    background-image: url('../images/gradientbg8.jpg')
+    background-image: url('../images/gradientbg8.jpg');
 }
 .bio-bg{
     /* background-image: url('../images/CATS-3-JustBG.jpg');  */
     /* background-image: url('../images/nukage-blurbg-1.jpg'); */
-    background-image: url('../images/nukage-gradientbg3.jpg')
+    background-image: url('../images/nukage-gradientbg3.jpg');
 }
 .music-bg {
     /* background-image: url('../images/lit-blurred-bg.jpg'); */

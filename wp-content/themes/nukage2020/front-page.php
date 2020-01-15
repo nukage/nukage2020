@@ -9,7 +9,26 @@
                         <img class="mx-auto rounded-full fade-anim shadow1" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/headshot-5.jpg">
                     </div>
                     <div class="md:w-2/3 w-full container flex flex-col quick-list-holder md:pl-16   items-center justify-center">
-                        <img class=" h-48 w-auto fade-anim" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/Splash Logo.png">
+                        <div class="uppercase text-gray-500 mb-4 fade-anim">
+                            <?php _e( 'ARTIST • PRODUCER • PERFORMER • DJ', 'nukage_2020' ); ?> 
+                        </div>
+                        <img class=" h-auto w-auto fade-anim" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/nukage logo.png">
+                        <div class="uppercase text-gray-500 mb-4 fade-anim raleway font-extrabold mt-3 fade-anim trans">
+                            <div class="rotator inline-block trans ">
+                                <div class="inline">
+                                    <?php _e( 'Electronic Music Producer', 'nukage_2020' ); ?>
+                                </div>
+                                <div class="inline">
+                                    <?php _e( 'Live Performer', 'nukage_2020' ); ?>
+                                </div>
+                                <div class="inline">
+                                    <?php _e( 'Live DJ', 'nukage_2020' ); ?>
+                                </div>
+                                <div class="inline">
+                                    <?php _e( 'Recording Artist', 'nukage_2020' ); ?>
+                                </div>
+                            </div>
+                        </div>
                         <div class="w-2/3 m-auto font-hairline">
                             <div class=" flex lg:flex-row flex-col flex-wrap p-0 text-center leading-loose xl:text-base text-sm uppercase mt-6 ">
                                 <div class="lg:w-1/2 w-full p-0 mb-3 slide-in-anim ">
