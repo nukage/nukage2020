@@ -4,15 +4,50 @@
 
 
 /* FONTS */
-@import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800|Raleway:100,300,400,600,700,800,900|Oswald:200,300,400,500,600,700&display=swap');
+ 
 
-.oswald {
-    font-family: "Oswald";
+
+#bio {
+
+
+  }
+.contact-bg{
+    background-image: url('../images/nukage-gradientbg6.jpg');
+
+  }
+
+  .press-bg{
+    background-image: url('../images/nukage-gradientbg4.jpg');
+  }
+
+  .videos-bg{
+    background-image: url('../images/gradientbg7.jpg')
+  }
+.photos-bg{
+    background-image: url('../images/nukage-gradientbg5.jpg')
+   
+}
+ 
+
+.qs-bg {
+    background-image: url('../images/gradientbg8.jpg')
+}
+.bio-bg{
+    /* background-image: url('../images/CATS-3-JustBG.jpg');  */
+    /* background-image: url('../images/nukage-blurbg-1.jpg'); */
+    background-image: url('../images/nukage-gradientbg3.jpg')
+}
+.music-bg {
+    /* background-image: url('../images/lit-blurred-bg.jpg'); */
+    background-image: url('../images/nukage-gradientbg2.jpg');
+
+    
 }
 p {
     margin-bottom:1rem;
-    font-weight:200;
-    /* line-height:2.5rem; */
+    /* font-weight:200; */
+    line-height:2.5rem;
 }
 
 body{
@@ -20,10 +55,7 @@ body{
     text-rendering: geometricPrecision;
 }
  
-.bg-overlay {
-    background:rgba(0, 8, 144, 0.41);
-    /* background-image: url(../images/overlay-pattern3.png); */
-}
+
 .s1 {
     /* background-image: url(../images/mixer.jpg) !important; */
     background-attachment: fixed!important;
@@ -35,15 +67,11 @@ body{
     /* max-width:1000px; */
 }
 
-.navbar {
-    border-bottom: rgba(222,34,92, .5) 1px solid;
-    background: rgba(0,0,0,.5);
-}
+.bg-trans-bk{background: rgba(0,0,0,.5);}
 
-.sign-up-nav-link {
-    color:rgba(222,34,92, 1) ;
-    border: rgba(222,34,92, 1) solid 1px ;
-}
+
+
+ 
 
 /* .quick-list-holder ul {
     margin:0;padding:0;
@@ -52,11 +80,11 @@ body{
 .quick-list-holder ul li{
     padding:.5rem;
     border: 1px solid rgba(255,255,255,.2);
-    font-weight: 100;
+    /* font-weight: 100; */
 
 }
 .quick-list-holder ul li span {
     text-transform: uppercase;
-    font-weight: 400;
+    font-weight: 800;
 }
 

@@ -1,6 +1,42 @@
 var nukage;
 $(function () {
     nukage = {
+      loadAnimate: function(className, preDelay, delay, animationName){
+        console.log('loadAnimate');
+        $(className).each(function(index){
+                var self = this
+                setTimeout(function () {
+                      $(self).addClass(animationName);
+                }, index*delay + preDelay);
+              });
+            },
+
+      skrollr: function(){
+        console.log('SKROLLR');
+        skrollr.init({
+         
+          // smoothScrolling: false,
+          // mobileDeceleration: 0.004
+        });
+      },
+
+      combinedScroll: function() {
+        $(document).ready(function () {
+          console.log ('combineScroll Loaded')
+          // Hook up the current state to the nav bar
+          $('.nav-sub-menu').onePageNav();
+        });
+      },
+
+      headroom: function() {
+ 
+            // grab an element
+            var myElement = document.querySelector(".navbar");
+            // construct an instance of Headroom, passing the element
+            var headroom  = new Headroom(myElement);
+            // initialise
+            headroom.init();
+      },
         
         gallery: function (){
             
@@ -14,7 +50,13 @@ $(function () {
                           ]
                     });
                     
+                    // Init Isotope
+                    var $grid = $(".grid").isotope({
+                      itemSelector: '.element-item' 
+                      
 
+                      // options
+                  });
                     
                     // Filter items on button click
                     $(".filter-button-group").on("click", "button", function() {
@@ -84,7 +126,8 @@ $(function () {
               .css('display', 'flex')
               .hide()
               .fadeIn(200);
-            });
+              $(modalContent).addClass('slide-in-blurred-bottom');
+              $(modalContent).removeClass('roll-out-bottom');             });
       
             // CLOSE MODAL
             // const btn = '.modal-close';
@@ -97,6 +140,10 @@ $(function () {
               if (clicked.is($(btn)) || clicked.parents().is($(btn))) {
                 $(modal).fadeOut(200).promise().done(function () {
                   $(this).removeAttr('style');
+                  $(modalContent).removeClass('slide-in-blurred-bottom');
+ 
+ 
+                 
                 });
       
               // don't close if clicking around in the form or other modal content
@@ -105,6 +152,7 @@ $(function () {
               } else {
                 $(modal).fadeOut(200).promise().done(function () {
                   $(this).removeAttr('style');
+                  $(modalContent).removeClass('slide-in-blurred-bottom');
                 });
               }
             });
@@ -113,7 +161,13 @@ $(function () {
 
     nukage.faq();
     nukage.gallery();
+    nukage.loadAnimate('.fade-anim', 100, 200, 'fade-in' );
+    nukage.loadAnimate('.slide-in-anim', 1000, 100, 'slide-in-blurred-bottom' );
     nukage.mainModal('.sign-up-nav-link', '.modal-mc-bg', '.modal-close', '.modal-mc');
+    nukage.combinedScroll();
+    nukage.headroom();
+    // nukage.skrollr();
+
 
 });
 
