@@ -202,7 +202,7 @@ $(function () {
     nukage.loadAnimate('.fade-anim', 0, 200, 'fade-in' );
     nukage.loadAnimate('.slide-in-anim', 1000, 100, 'slide-in-blurred-bottom' );
     nukage.mainModal('.sign-up-nav-link', '.modal-mc-bg', '.modal-close', '.modal-mc');
-    // nukage.combinedScroll();
+    nukage.combinedScroll();
     nukage.headroom();
     nukage.textRotator();
     // nukage.skrollr();

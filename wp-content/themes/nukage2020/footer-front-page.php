@@ -1,5 +1,5 @@
 
-</div>
+            </div>
             <!-- .by-overlay -->
             <div class="footer-push"></div>
         </div>
@@ -16,23 +16,28 @@
                     <div id="mc_embed_signup">
                         <form action="https://nukagemusic.us17.list-manage.com/subscribe/post?u=748d58fe44a6b6eb6bba2b7ae&amp;id=9ce2d4839d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate w-3/4 m-auto" target="_blank" novalidate>
                             <div id="mc_embed_signup_scroll">
+                                <!-- <h2>Subscribe</h2> -->
                                 <div class="indicates-required">
                                     <span class="asterisk">*</span> 
                                     <?php _e( 'indicates required', 'nukage2020' ); ?>
                                 </div>
                                 <div class="mc-field-group">
+                                    <!-- <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span> -->
                                     <input type="email" value="" name="EMAIL" class="required email border border-gray-600  my-2 p-2 w-full bg-transparent text-white uppercase " id="mce-EMAIL" placeholder="Email *">
                                 </div>
                                 <div class="mc-field-group">
+                                    <!-- <label for="mce-FNAME">First Name </label> -->
                                     <input type="text" value="" name="FNAME" class="border border-gray-600  my-2 p-2 w-full bg-transparent text-white uppercase" id="mce-FNAME" placeholder="First Name">
                                 </div>
                                 <div class="mc-field-group">
+                                    <!-- <label for="mce-LNAME">Last Name </label> -->
                                     <input type="text" value="" name="LNAME" class=" border border-gray-600  my-2 p-2 w-full bg-transparent text-white uppercase" id="mce-LNAME" placeholder="Last Name">
                                 </div>
                                 <div id="mce-responses" class="clear">
                                     <div class="response" id="mce-error-response" style="display:none"></div>
                                     <div class="response" id="mce-success-response" style="display:none"></div>
                                 </div>                                 
+                                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
                                 <div style="position: absolute; left: -5000px;" aria-hidden="true">
                                     <input type="text" name="b_748d58fe44a6b6eb6bba2b7ae_9ce2d4839d" tabindex="-1" value="">
                                 </div>
@@ -53,6 +58,5 @@
         </footer>
         <!-- .body-wrapper -->
         <!-- Js lib -->
+        <!-- <script type="text/javascript" src="js/jquery.combinedScroll.js"></script> -->
         <?php wp_footer(); ?>
-    </body>
-</html>

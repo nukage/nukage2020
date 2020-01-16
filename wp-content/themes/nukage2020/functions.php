@@ -172,6 +172,9 @@ if ( ! function_exists( 'nukage2020_enqueue_scripts' ) ) :
     wp_deregister_script( 'jqueryfancybox' );
     wp_enqueue_script( 'jqueryfancybox', get_template_directory_uri() . '/js/jquery.fancybox.min.js', false, null, true);
 
+    wp_deregister_script( 'jquerycombinedscroll' );
+    wp_enqueue_script( 'jquerycombinedscroll', get_template_directory_uri() . '/js/jquery.combinedScroll.js', false, null, true);
+
     wp_deregister_script( 'jquerynav' );
     wp_enqueue_script( 'jquerynav', get_template_directory_uri() . '/js/jquery.nav.js', false, null, true);
 
