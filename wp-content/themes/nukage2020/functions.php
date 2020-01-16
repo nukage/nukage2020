@@ -41,9 +41,10 @@ function nukage2020_setup() {
 /*
     * Set image sizes
      */
-    /* Pinegrow generated Image sizes Begin */
+    /* Pinegrow generated Image Sizes Begin */
 
-    /* Pinegrow generated Image sizes End */
+    add_image_size( 'gallery_thumb', 500, 350, true );
+    /* Pinegrow generated Image Sizes End */
     
     /*
      * Switch default core markup for search form, comment form, and comments
@@ -106,8 +107,12 @@ function nukage2020_custom_image_sizes_names( $sizes ) {
     /*
      * Add names of custom image sizes.
      */
-    /* Pinegrow generated Image Sizes Names Begin*/
-    /* This code will be replaced by returning names of custom image sizes. */
+    /* Pinegrow generated Image Sizes Names Begin */
+
+    return array_merge( $sizes, array(
+        'gallery_thumb' => __( 'Gallery Thumb' )
+    ) );
+
     /* Pinegrow generated Image Sizes Names End */
     return $sizes;
 }
