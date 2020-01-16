@@ -1,14 +1,14 @@
 <?php
-if ( ! function_exists( 'nukage_2020_setup' ) ) :
+if ( ! function_exists( 'nukage2020_setup' ) ) :
 
-function nukage_2020_setup() {
+function nukage2020_setup() {
 
     /*
      * Make theme available for translation.
      * Translations can be filed in the /languages/ directory.
      */
     /* Pinegrow generated Load Text Domain Begin */
-    load_theme_textdomain( 'nukage_2020', get_template_directory() . '/languages' );
+    load_theme_textdomain( 'nukage2020', get_template_directory() . '/languages' );
     /* Pinegrow generated Load Text Domain End */
 
     // Add default posts and comments RSS feed links to head.
@@ -27,8 +27,8 @@ function nukage_2020_setup() {
 
     // Add menus.
     register_nav_menus( array(
-        'primary' => __( 'Primary Menu', 'nukage_2020' ),
-        'social'  => __( 'Social Links Menu', 'nukage_2020' ),
+        'primary' => __( 'Primary Menu', 'nukage2020' ),
+        'social'  => __( 'Social Links Menu', 'nukage2020' ),
     ) );
 
 /*
@@ -41,10 +41,9 @@ function nukage_2020_setup() {
 /*
     * Set image sizes
      */
-    /* Pinegrow generated Image Sizes Begin */
+    /* Pinegrow generated Image sizes Begin */
 
-    add_image_size( 'gallery_thumb', 500, 350, true );
-    /* Pinegrow generated Image Sizes End */
+    /* Pinegrow generated Image sizes End */
     
     /*
      * Switch default core markup for search form, comment form, and comments
@@ -66,14 +65,14 @@ function nukage_2020_setup() {
      */
      add_post_type_support( 'page', 'excerpt' );
 }
-endif; // nukage_2020_setup
+endif; // nukage2020_setup
 
-add_action( 'after_setup_theme', 'nukage_2020_setup' );
+add_action( 'after_setup_theme', 'nukage2020_setup' );
 
 
-if ( ! function_exists( 'nukage_2020_init' ) ) :
+if ( ! function_exists( 'nukage2020_init' ) ) :
 
-function nukage_2020_init() {
+function nukage2020_init() {
 
     
     // Use categories and tags with attachments
@@ -95,35 +94,31 @@ function nukage_2020_init() {
     /* Pinegrow generated Taxonomies End */
 
 }
-endif; // nukage_2020_setup
+endif; // nukage2020_setup
 
-add_action( 'init', 'nukage_2020_init' );
+add_action( 'init', 'nukage2020_init' );
 
 
-if ( ! function_exists( 'nukage_2020_custom_image_sizes_names' ) ) :
+if ( ! function_exists( 'nukage2020_custom_image_sizes_names' ) ) :
 
-function nukage_2020_custom_image_sizes_names( $sizes ) {
+function nukage2020_custom_image_sizes_names( $sizes ) {
 
     /*
      * Add names of custom image sizes.
      */
-    /* Pinegrow generated Image Sizes Names Begin */
-
-    return array_merge( $sizes, array(
-        'gallery_thumb' => __( 'Gallery Thumb' )
-    ) );
-
+    /* Pinegrow generated Image Sizes Names Begin*/
+    /* This code will be replaced by returning names of custom image sizes. */
     /* Pinegrow generated Image Sizes Names End */
     return $sizes;
 }
-add_action( 'image_size_names_choose', 'nukage_2020_custom_image_sizes_names' );
-endif;// nukage_2020_custom_image_sizes_names
+add_action( 'image_size_names_choose', 'nukage2020_custom_image_sizes_names' );
+endif;// nukage2020_custom_image_sizes_names
 
 
 
-if ( ! function_exists( 'nukage_2020_widgets_init' ) ) :
+if ( ! function_exists( 'nukage2020_widgets_init' ) ) :
 
-function nukage_2020_widgets_init() {
+function nukage2020_widgets_init() {
 
     /*
      * Register widget areas.
@@ -132,14 +127,14 @@ function nukage_2020_widgets_init() {
 
     /* Pinegrow generated Register Sidebars End */
 }
-add_action( 'widgets_init', 'nukage_2020_widgets_init' );
-endif;// nukage_2020_widgets_init
+add_action( 'widgets_init', 'nukage2020_widgets_init' );
+endif;// nukage2020_widgets_init
 
 
 
-if ( ! function_exists( 'nukage_2020_customize_register' ) ) :
+if ( ! function_exists( 'nukage2020_customize_register' ) ) :
 
-function nukage_2020_customize_register( $wp_customize ) {
+function nukage2020_customize_register( $wp_customize ) {
     // Do stuff with $wp_customize, the WP_Customize_Manager object.
 
     /* Pinegrow generated Customizer Controls Begin */
@@ -147,23 +142,22 @@ function nukage_2020_customize_register( $wp_customize ) {
     /* Pinegrow generated Customizer Controls End */
 
 }
-add_action( 'customize_register', 'nukage_2020_customize_register' );
-endif;// nukage_2020_customize_register
+add_action( 'customize_register', 'nukage2020_customize_register' );
+endif;// nukage2020_customize_register
 
 
-if ( ! function_exists( 'nukage_2020_enqueue_scripts' ) ) :
-    function nukage_2020_enqueue_scripts() {
+if ( ! function_exists( 'nukage2020_enqueue_scripts' ) ) :
+    function nukage2020_enqueue_scripts() {
 
         /* Pinegrow generated Enqueue Scripts Begin */
 
-    wp_deregister_script( 'cdbaecd' );
-    wp_enqueue_script( 'cdbaecd', 'https://kit.fontawesome.com/cd4b1a5ecd.js', false, null, false);
+    wp_deregister_script( 'main' );
+    wp_register_script( 'main', get_template_directory_uri() . '/js/main.js', null, '1', true );
+    wp_enqueue_script( 'main' );
 
-    wp_deregister_script( 'mcvalidate' );
-    wp_enqueue_script( 'mcvalidate', get_template_directory_uri() . '/js/mc-validate.js', false, null, true);
+    wp_deregister_script( 'jquery' );
+    wp_enqueue_script( 'jquery', get_template_directory_uri() . '/js/jquery-3.4.1.min.js', false, null, true);
 
-    wp_add_inline_script( 'mcvalidate', '(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]=\'EMAIL\';ftypes[0]=\'email\';fnames[1]=\'FNAME\';ftypes[1]=\'text\';fnames[2]=\'LNAME\';ftypes[2]=\'text\';fnames[3]=\'ADDRESS\';ftypes[3]=\'address\';fnames[4]=\'PHONE\';ftypes[4]=\'phone\';}(jQuery));var $mcj = jQuery.noConflict(true);');
-    wp_enqueue_script( 'jquery' );
     wp_deregister_script( 'jqueryui' );
     wp_enqueue_script( 'jqueryui', get_template_directory_uri() . '/js/jquery-ui.min.js', false, null, true);
 
@@ -173,9 +167,19 @@ if ( ! function_exists( 'nukage_2020_enqueue_scripts' ) ) :
     wp_deregister_script( 'jqueryfancybox' );
     wp_enqueue_script( 'jqueryfancybox', get_template_directory_uri() . '/js/jquery.fancybox.min.js', false, null, true);
 
-    wp_deregister_script( 'main' );
-    wp_enqueue_script( 'main', get_template_directory_uri() . '/js/main.js', false, null, true);
+    wp_deregister_script( 'jquerynav' );
+    wp_enqueue_script( 'jquerynav', get_template_directory_uri() . '/js/jquery.nav.js', false, null, true);
 
+    wp_deregister_script( 'headroom' );
+    wp_enqueue_script( 'headroom', get_template_directory_uri() . '/js/headroom.min.js', false, null, true);
+
+    wp_deregister_script( 'skrollr' );
+    wp_enqueue_script( 'skrollr', get_template_directory_uri() . '/js/skrollr.min.js', false, null, true);
+
+    wp_deregister_script( 'mcvalidate' );
+    wp_enqueue_script( 'mcvalidate', get_template_directory_uri() . '/js/mc-validate.js', false, null, true);
+
+    wp_add_inline_script( 'mcvalidate', '(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]=\'EMAIL\';ftypes[0]=\'email\';fnames[1]=\'FNAME\';ftypes[1]=\'text\';fnames[2]=\'LNAME\';ftypes[2]=\'text\';fnames[3]=\'ADDRESS\';ftypes[3]=\'address\';fnames[4]=\'PHONE\';ftypes[4]=\'phone\';}(jQuery));var $mcj = jQuery.noConflict(true);');
     /* Pinegrow generated Enqueue Scripts End */
 
         /* Pinegrow generated Enqueue Styles Begin */
@@ -195,7 +199,7 @@ if ( ! function_exists( 'nukage_2020_enqueue_scripts' ) ) :
     /* Pinegrow generated Enqueue Styles End */
 
     }
-    add_action( 'wp_enqueue_scripts', 'nukage_2020_enqueue_scripts' );
+    add_action( 'wp_enqueue_scripts', 'nukage2020_enqueue_scripts' );
 endif;
 
 function pgwp_sanitize_placeholder($input) { return $input; }

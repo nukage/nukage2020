@@ -1,4 +1,4 @@
-<?php get_header( 'front-page' ); ?>
+<?php get_header(); ?>
 
 <div class="bg-overlay ">
     <section id="quick-stats" class="oswald md:text-xl">
@@ -10,40 +10,46 @@
                     </div>
                     <div class="md:w-2/3 w-full container flex flex-col quick-list-holder md:pl-16   items-center justify-center">
                         <div class="uppercase text-gray-500 mb-4 fade-anim">
-                            <?php _e( 'ARTIST • PRODUCER • PERFORMER • DJ', 'nukage_2020' ); ?> 
+                            <?php _e( 'ARTIST • PRODUCER • PERFORMER • DJ', 'nukage2020' ); ?> 
                         </div>
                         <img class=" h-auto w-auto fade-anim" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/nukage logo.png">
                         <div class="uppercase text-gray-500 mb-4 fade-anim raleway font-extrabold mt-3 fade-anim trans">
                             <div class="rotator inline-block trans ">
                                 <div class="inline">
-                                    <?php _e( 'Electronic Music Producer', 'nukage_2020' ); ?>
+                                    <?php _e( 'Electronic Music Producer', 'nukage2020' ); ?>
                                 </div>
-                                <!-- <div class="inline">Live Performer</div>
-                                <div class="inline">Live DJ</div>
-                                <div class="inline">Recording Artist</div> -->
+                                <div class="inline">
+                                    <?php _e( 'Live Performer', 'nukage2020' ); ?>
+                                </div>
+                                <div class="inline">
+                                    <?php _e( 'Live DJ', 'nukage2020' ); ?>
+                                </div>
+                                <div class="inline">
+                                    <?php _e( 'Recording Artist', 'nukage2020' ); ?>
+                                </div>
                             </div>
                         </div>
                         <div class="w-2/3 m-auto font-hairline">
                             <div class=" flex lg:flex-row flex-col flex-wrap p-0 text-center leading-loose xl:text-base text-sm uppercase mt-6 ">
                                 <div class="lg:w-1/2 w-full p-0 mb-3 slide-in-anim ">
-                                    <span class="font-medium"><?php _e( 'GENRES:', 'nukage_2020' ); ?></span> 
+                                    <span class="font-medium"><?php _e( 'GENRES:', 'nukage2020' ); ?></span> 
                                     <br class="lg:inline hidden">
-                                    <?php _e( 'Dubstep, Future Bass, Trap', 'nukage_2020' ); ?>
+                                    <?php _e( 'Dubstep, Future Bass, Trap', 'nukage2020' ); ?>
                                 </div>
                                 <div class="lg:w-1/2 w-full p-0 mb-3 slide-in-anim">
-                                    <span class="font-medium"><?php _e( 'SUPPORT FROM:', 'nukage_2020' ); ?></span> 
+                                    <span class="font-medium"><?php _e( 'SUPPORT FROM:', 'nukage2020' ); ?></span> 
                                     <br class="lg:inline hidden">
-                                    <?php _e( 'Ill Gates, KJ Sawka, Architekt', 'nukage_2020' ); ?>
+                                    <?php _e( 'Ill Gates, KJ Sawka, Architekt', 'nukage2020' ); ?>
                                 </div>
                                 <div class="lg:w-1/2 w-full p-0 mb-3 slide-in-anim">
-                                    <span class="font-medium"><?php _e( 'PERFOMANCE STYLE:', 'nukage_2020' ); ?> </span>
+                                    <span class="font-medium"><?php _e( 'PERFOMANCE STYLE:', 'nukage2020' ); ?> </span>
                                     <br class="lg:inline hidden">
-                                    <?php _e( 'Live PA or DJ Set', 'nukage_2020' ); ?>
+                                    <?php _e( 'Live PA or DJ Set', 'nukage2020' ); ?>
                                 </div>
                                 <div class="lg:w-1/2 w-full p-0 mb-3 slide-in-anim">
-                                    <span class="font-medium"><?php _e( '5 DIFFERENT', 'nukage_2020' ); ?> </span>
+                                    <span class="font-medium"><?php _e( '5 DIFFERENT', 'nukage2020' ); ?> </span>
                                     <br class="lg:inline hidden">
-                                    <?php _e( 'BEATPORT CHARTING RELEASES', 'nukage_2020' ); ?> 
+                                    <?php _e( 'BEATPORT CHARTING RELEASES', 'nukage2020' ); ?> 
                                 </div>
                             </div>
                         </div>
@@ -119,7 +125,7 @@
         <div class="bio-bg  gray-txt-1 font-medium ">
             <div class="bio-overlay   pt-32 pb-32">
                 <div class="container mx-auto">
-                    <h3 class="section-title "><?php _e( 'Bio', 'nukage_2020' ); ?></h3>
+                    <h3 class="section-title "><?php _e( 'Bio', 'nukage2020' ); ?></h3>
                     <div class="header-strips-1"></div>
                     <div class="accordion p-3  ">
                         <?php  
@@ -154,21 +160,21 @@
         <div class="photos-bg">
             <div class="photos-overlay pt-32 pb-24 ">
                 <div class="container mx-auto">
-                    <h3 class="section-title"><?php _e( 'Photo Gallery', 'nukage_2020' ); ?></h3>
+                    <h3 class="section-title"><?php _e( 'Photo Gallery', 'nukage2020' ); ?></h3>
                     <div class="header-strips-1"></div>
                     <div class="button-group filter-button-group oswald uppercase mx-auto inline-block text-center">
                         <button data-filter="*" class="btn  ">
-                            <?php _e( 'Show', 'nukage_2020' ); ?>
-                            <?php _e( 'all', 'nukage_2020' ); ?>
+                            <?php _e( 'Show', 'nukage2020' ); ?>
+                            <?php _e( 'all', 'nukage2020' ); ?>
                         </button>
                         <button data-filter=".headshot" class="btn  ">
-                            <?php _e( 'headshot', 'nukage_2020' ); ?>
+                            <?php _e( 'headshot', 'nukage2020' ); ?>
                         </button>
                         <button data-filter=".live" class="btn">
-                            <?php _e( 'live', 'nukage_2020' ); ?>
+                            <?php _e( 'live', 'nukage2020' ); ?>
                         </button>
                         <button data-filter=".press" class="btn">
-                            <?php _e( 'press', 'nukage_2020' ); ?>
+                            <?php _e( 'press', 'nukage2020' ); ?>
                         </button>
                     </div>
                 </div>
@@ -189,7 +195,7 @@
                     </div>
                 <?php endwhile;
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       endif;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               endif;
                 ?>
                 </div>
             </div>
@@ -199,7 +205,7 @@
         <div class="videos-bg">
             <div class="videos-overlay  pt-32 pb-24">
                 <div class="container mx-auto ">
-                    <h3 class="section-title "><?php _e( 'Videos', 'nukage_2020' ); ?></h3>
+                    <h3 class="section-title "><?php _e( 'Videos', 'nukage2020' ); ?></h3>
                     <div class="header-strips-1"></div>
                 <div class="video-block flex flex-row flex-wrap w-full">
                         <?php
@@ -218,7 +224,7 @@
                             <p class="text-center mt-3 oswald uppercase text-sm"><?php echo $caption ?></p>
                         </div>
                     <?php endwhile;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       endif;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       endif;
                     ?>
                     </div>
                 </div>
@@ -229,7 +235,7 @@
         <div class="music-bg">
             <div class="music-overlay pt-32 pb-24">
                 <div class="container mx-auto ">
-                    <h3 class="section-title  "><?php _e( 'Music', 'nukage_2020' ); ?></h3>
+                    <h3 class="section-title  "><?php _e( 'Music', 'nukage2020' ); ?></h3>
                     <div class="header-strips-1"></div>
                     <div class="flex flex-col md:flex-row  md:flex-wrap justify-center pb-24 ">
                         <div class="w-full md:w-1/2 lg:w-1/3 p-10 ">
@@ -250,7 +256,7 @@
         <div class="press-bg">
             <div class="press-overlay pt-32 pb-24">
                 <div class="container mx-auto">
-                    <h3 class="section-title  "><?php _e( 'Press &amp; Features', 'nukage_2020' ); ?></h3>
+                    <h3 class="section-title  "><?php _e( 'Press &amp; Features', 'nukage2020' ); ?></h3>
                     <div class="header-strips-1"></div>
                     <div class="press flex flex-row flex-wrap justify-center pb-24">
                         <?php if ( have_rows('news_items') ) : while( have_rows('news_items') ) : the_row()                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ?>
@@ -261,7 +267,7 @@
                                 </div>
                             </div>
                         <?php endwhile;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           endif;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           endif;
                         ?>
                     </div>
                 </div>
@@ -274,7 +280,7 @@
     <section id="contact">
         <div class="contact-bg ">
             <div class="contact-overlay pt-16 pb-32">
-                <h3 class="section-title   pt-24"><?php _e( 'Contact', 'nukage_2020' ); ?></h3>
+                <h3 class="section-title   pt-24"><?php _e( 'Contact', 'nukage2020' ); ?></h3>
                 <div class="header-strips-1"></div>
                 <div class="container mx-auto flex md:flex-row flex-col max-w-5xl pb-24">
                     <!-- <div class="p-1 md:w-1/2 w-full flex-grow flex flex-col hidden ">
@@ -300,4 +306,4 @@
     </section>
 </div>                
 
-<?php get_footer( 'front-page' ); ?>
+<?php get_footer(); ?>

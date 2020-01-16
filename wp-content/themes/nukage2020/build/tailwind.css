@@ -663,15 +663,27 @@ video {
 
 /* BG Stuff */
 
+@media (min-width: 768px) {
+
 .overlay-1 {
-  background-attachment: fixed;
+    background-attachment: fixed;
+}
+  }
+
+.overlay-1 {
   background-size: cover;
   margin:0;
   padding:0;
 }
 
+@media (min-width: 768px) {
+
 .qs-bg, .contact-bg, .press-bg, .videos-bg, .music-bg, .bio-bg, .photos-bg {
-  background-attachment: fixed;
+    background-attachment: fixed;
+  }
+}
+
+.qs-bg, .contact-bg, .press-bg, .videos-bg, .music-bg, .bio-bg, .photos-bg {
   background-size: cover;
   margin:0;
   padding:0;
