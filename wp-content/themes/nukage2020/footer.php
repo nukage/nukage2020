@@ -53,6 +53,7 @@
         </footer>
         <!-- .body-wrapper -->
         <!-- Js lib -->
+        <!-- <script src="js/skrollr.min.js"></script> -->
         <?php wp_footer(); ?>
     </body>
 </html>

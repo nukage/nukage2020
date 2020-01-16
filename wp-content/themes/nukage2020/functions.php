@@ -181,9 +181,6 @@ if ( ! function_exists( 'nukage2020_enqueue_scripts' ) ) :
     wp_deregister_script( 'headroom' );
     wp_enqueue_script( 'headroom', get_template_directory_uri() . '/js/headroom.min.js', false, null, true);
 
-    wp_deregister_script( 'skrollr' );
-    wp_enqueue_script( 'skrollr', get_template_directory_uri() . '/js/skrollr.min.js', false, null, true);
-
     wp_deregister_script( 'mcvalidate' );
     wp_enqueue_script( 'mcvalidate', get_template_directory_uri() . '/js/mc-validate.js', false, null, true);
 
