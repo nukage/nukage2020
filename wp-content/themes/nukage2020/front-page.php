@@ -159,6 +159,29 @@
             </div>
         </div>
     </section>
+    <section id="press">
+        <div class="press-bg">
+            <div class="press-overlay pt-32 pb-24">
+                <div class="container mx-auto">
+                    <h3 class="section-title  "><?php _e( 'Press &amp; Features', 'nukage2020' ); ?></h3>
+                    <div class="header-strips-1"></div>
+                    <div class="press flex flex-row flex-wrap justify-center pb-24">
+                        <?php if ( have_rows('news_items') ) : while( have_rows('news_items') ) : the_row()
+                        ?>
+                            <div class="press-item   ">
+                                <div class="inner ">
+                                    <h4 class="press-quote gray-txt-2 uppercase text-3xl text-center font-black leading-tight"><?php echo get_sub_field('quote') ?></h4>
+                                    <a class="press-link text-center m-auto inline-block w-full pr-5 pt-3 text-risered_1 oswald  italic hover:underline" href="<?php echo esc_url( get_sub_field('news_link') ); ?>" target="_blank"><?php echo get_sub_field('news_source') ?></a>
+                                </div>
+                            </div>
+                        <?php endwhile;
+                                                                                                           endif;
+                        ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- #bio -->
     <section id="gallery">
         <div class="photos-bg">
@@ -199,7 +222,7 @@
                     </div>
                 <?php endwhile;
 
-                                                       endif;
+                                                                                           endif;
                 ?>
                 </div>
             </div>
@@ -227,7 +250,7 @@
                             <p class="text-center mt-3 oswald uppercase text-sm"><?php echo $caption ?></p>
                         </div>
                     <?php endwhile;
-                                                               endif;
+                                                                                                       endif;
                     ?>
                     </div>
                 </div>
@@ -250,29 +273,6 @@
                         <div class="w-full md:w-1/2 lg:w-1/3 p-10 ">
                             <iframe width="100%" height="400" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/521934486&color=%23de225c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="press">
-        <div class="press-bg">
-            <div class="press-overlay pt-32 pb-24">
-                <div class="container mx-auto">
-                    <h3 class="section-title  "><?php _e( 'Press &amp; Features', 'nukage2020' ); ?></h3>
-                    <div class="header-strips-1"></div>
-                    <div class="press flex flex-row flex-wrap justify-center pb-24">
-                        <?php if ( have_rows('news_items') ) : while( have_rows('news_items') ) : the_row()
-                        ?>
-                            <div class="press-item   ">
-                                <div class="inner ">
-                                    <h4 class="press-quote gray-txt-2"><?php echo get_sub_field('quote') ?></h4>
-                                    <a class="press-link text-risered_1 oswald font-bold italic hover:underline" href="<?php echo esc_url( get_sub_field('news_link') ); ?>" target="_blank"><?php echo get_sub_field('news_source') ?></a>
-                                </div>
-                            </div>
-                        <?php endwhile;
-                                                                   endif;
-                        ?>
                     </div>
                 </div>
             </div>
