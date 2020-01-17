@@ -667,11 +667,14 @@ video {
 
 .overlay-1 {
     background-attachment: fixed;
+
+    background-size: cover;
 }
   }
 
 .overlay-1 {
-  background-size: cover;
+  background-size:  auto;
+  background-position: center  center ;
   margin:0;
   padding:0;
 }
@@ -680,11 +683,14 @@ video {
 
 .qs-bg, .contact-bg, .press-bg, .videos-bg, .music-bg, .bio-bg, .photos-bg {
     background-attachment: fixed;
+
+    background-size: cover;
   }
 }
 
 .qs-bg, .contact-bg, .press-bg, .videos-bg, .music-bg, .bio-bg, .photos-bg {
-  background-size: cover;
+  background-size:  auto;
+  background-position: center  center;
   margin:0;
   padding:0;
 }
