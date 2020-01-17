@@ -31,6 +31,9 @@
                             <a href="#bio"><?php _e( 'Bio', 'nukage2020' ); ?></a>
                         </li>
                         <li class="lah">
+                            <a href="#press"><?php _e( 'Press', 'nukage2020' ); ?> <span class="md:inline hidden "> <?php _e( '&amp; Features', 'nukage2020' ); ?></span></a>
+                        </li>
+                        <li class="lah">
                             <a href="#gallery"> <!-- <span class="md:inline hidden ">Artist</span> --> <?php _e( 'Photos', 'nukage2020' ); ?></a>
                         </li>
                         <li class="lah">
@@ -38,9 +41,6 @@
                         </li>
                         <li class="lah">
                             <a href="#music"><?php _e( 'Music', 'nukage2020' ); ?></a>
-                        </li>
-                        <li class="lah">
-                            <a href="#press"><?php _e( 'Press', 'nukage2020' ); ?> <span class="md:inline hidden "> <?php _e( '&amp; Features', 'nukage2020' ); ?></span></a>
                         </li>
                         <!-- <li class="lah">
                             <a href="#logos">Logos<span class="md:inline hidden ">  &amp; Banners </span></a>
