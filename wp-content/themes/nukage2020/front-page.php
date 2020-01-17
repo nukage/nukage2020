@@ -10,7 +10,8 @@
                     </div>
                     <div class="md:w-2/3 w-full container flex flex-col quick-list-holder md:pl-16   items-center justify-center">
                         <div class="uppercase text-gray-500 mb-4 fade-anim">
-                            <?php _e( 'ARTIST • PRODUCER • PERFORMER • DJ', 'nukage2020' ); ?> 
+                            <?php _e( 'ARTIST • PRODUCER • PERFORMER •', 'nukage2020' ); ?>
+                            <?php _e( 'DJ', 'nukage2020' ); ?> 
                         </div>
                         <img class=" h-auto w-auto fade-anim" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/nukage logo.png">
                         <div class="uppercase text-gray-500 mb-4 fade-anim raleway font-extrabold mt-3 fade-anim trans">
@@ -35,12 +36,12 @@
                         <div class="w-2/3 m-auto font-hairline">
                             <div class=" flex lg:flex-row flex-col flex-wrap p-0 text-center leading-loose xl:text-base text-sm uppercase mt-6 ">
                                 <div class="lg:w-1/2 w-full p-0 mb-3 slide-in-anim ">
-                                    <span class="font-medium"><?php _e( 'GENRES:', 'nukage2020' ); ?></span> 
+                                    <span class="font-medium"><?php _e( 'GENRES:', 'nukage2020' ); ?></span>
                                     <br class="lg:inline hidden">
                                     <?php _e( 'Dubstep, Future Bass, Trap', 'nukage2020' ); ?>
                                 </div>
                                 <div class="lg:w-1/2 w-full p-0 mb-3 slide-in-anim">
-                                    <span class="font-medium"><?php _e( 'DJ SUPPORT:', 'nukage2020' ); ?></span> 
+                                    <span class="font-medium"><?php _e( 'DJ SUPPORT:', 'nukage2020' ); ?></span>
                                     <br class="lg:inline hidden">
                                     <?php _e( 'Ill Gates, KJ Sawka, Architekt', 'nukage2020' ); ?>
                                 </div>
@@ -52,7 +53,7 @@
                                 <div class="lg:w-1/2 w-full p-0 mb-3 slide-in-anim">
                                     <span class="font-medium"><?php _e( 'CHART TOPPING:', 'nukage2020' ); ?> </span>
                                     <br class="lg:inline hidden">
-                                    <?php _e( '5 BEATPORT CHARTING RELEASES', 'nukage2020' ); ?> 
+                                    <?php _e( '5 BEATPORT CHARTING RELEASES', 'nukage2020' ); ?>
                                 </div>
                             </div>
                         </div>
@@ -198,7 +199,7 @@
                     </div>
                 <?php endwhile;
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           endif;
+                                                       endif;
                 ?>
                 </div>
             </div>
@@ -210,24 +211,23 @@
                 <div class="container mx-auto ">
                     <h3 class="section-title "><?php _e( 'Videos', 'nukage2020' ); ?></h3>
                     <div class="header-strips-1"></div>
-                <div class="video-block flex flex-row flex-wrap w-full">
+                <div class="video-block flex flex-row flex-wrap w-full justify-center">
                         <?php
                             if(have_rows('video_gallery')) :
                             while( have_rows('video_gallery') ): the_row();
                             $image = get_sub_field('placeholder_image');
                             $caption = get_sub_field('video_caption');
-                            $thumb_image = wp_get_attachment_image($image, 'gallery_thumb', " " , array(
+                            $thumb_image = wp_get_attachment_image($image, 'video_thumb', " " , array(
                             "draggable" => "false" ) );
                             $full_image_url = wp_get_attachment_image_src($image, 'full' , false, '' );
                             $link = get_sub_field('video');
                         ?>
                         <div class="video-col ">
-                            <img class="play-icon" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/play-icon.svg" alt="">
-                            <a class="" href="<?php echo esc_url( $link ); ?>" data-fancybox="video"> <?php echo  $thumb_image ?></a>
+                            <a class="img-overlay" href="<?php echo esc_url( $link ); ?>" data-fancybox="video"> <?php echo  $thumb_image ?> <img class="play-icon  " src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/play-icon.svg" alt=""> </a>
                             <p class="text-center mt-3 oswald uppercase text-sm"><?php echo $caption ?></p>
                         </div>
                     <?php endwhile;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               endif;
+                                                               endif;
                     ?>
                     </div>
                 </div>
@@ -244,7 +244,7 @@
                         <div class="w-full md:w-1/2 lg:w-1/3 p-10 ">
                             <iframe width="100%" height="400" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/346239864%3Fsecret_token%3Ds-yavhv&color=%23de225c&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
                         </div>
-                        <div class="w-full md:w-1/2 lg:w-1/3 p-10"> 
+                        <div class="w-full md:w-1/2 lg:w-1/3 p-10">
                             <iframe width="100%" height="400" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/631193934&color=%23de225c&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
                         </div>
                         <div class="w-full md:w-1/2 lg:w-1/3 p-10 ">
@@ -262,7 +262,8 @@
                     <h3 class="section-title  "><?php _e( 'Press &amp; Features', 'nukage2020' ); ?></h3>
                     <div class="header-strips-1"></div>
                     <div class="press flex flex-row flex-wrap justify-center pb-24">
-                        <?php if ( have_rows('news_items') ) : while( have_rows('news_items') ) : the_row()                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ?>
+                        <?php if ( have_rows('news_items') ) : while( have_rows('news_items') ) : the_row()
+                        ?>
                             <div class="press-item   ">
                                 <div class="inner ">
                                     <h4 class="press-quote gray-txt-2"><?php echo get_sub_field('quote') ?></h4>
@@ -270,7 +271,7 @@
                                 </div>
                             </div>
                         <?php endwhile;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   endif;
+                                                                   endif;
                         ?>
                     </div>
                 </div>

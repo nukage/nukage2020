@@ -44,6 +44,7 @@ function nukage2020_setup() {
     /* Pinegrow generated Image Sizes Begin */
 
     add_image_size( 'gallery_thumb', 500, 350, true );
+    add_image_size( 'video_thumb', 640, 360, false );
     /* Pinegrow generated Image Sizes End */
     
     /*
@@ -110,7 +111,8 @@ function nukage2020_custom_image_sizes_names( $sizes ) {
     /* Pinegrow generated Image Sizes Names Begin */
 
     return array_merge( $sizes, array(
-        'gallery_thumb' => __( 'Gallery Thumb' )
+        'gallery_thumb' => __( 'Gallery Thumb' ),
+        'video_thumb' => __( 'video_thumb' )
     ) );
 
     /* Pinegrow generated Image Sizes Names End */
@@ -172,14 +174,14 @@ if ( ! function_exists( 'nukage2020_enqueue_scripts' ) ) :
     wp_deregister_script( 'jqueryfancybox' );
     wp_enqueue_script( 'jqueryfancybox', get_template_directory_uri() . '/js/jquery.fancybox.min.js', false, null, true);
 
+    wp_deregister_script( 'jquerycombinedscroll' );
+    wp_enqueue_script( 'jquerycombinedscroll', get_template_directory_uri() . '/js/jquery.combinedScroll.js', false, null, true);
+
     wp_deregister_script( 'jquerynav' );
     wp_enqueue_script( 'jquerynav', get_template_directory_uri() . '/js/jquery.nav.js', false, null, true);
 
     wp_deregister_script( 'headroom' );
     wp_enqueue_script( 'headroom', get_template_directory_uri() . '/js/headroom.min.js', false, null, true);
-
-    wp_deregister_script( 'skrollr' );
-    wp_enqueue_script( 'skrollr', get_template_directory_uri() . '/js/skrollr.min.js', false, null, true);
 
     wp_deregister_script( 'mcvalidate' );
     wp_enqueue_script( 'mcvalidate', get_template_directory_uri() . '/js/mc-validate.js', false, null, true);

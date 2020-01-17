@@ -44,6 +44,7 @@ function nukage2020_setup() {
     /* Pinegrow generated Image Sizes Begin */
 
     add_image_size( 'gallery_thumb', 500, 350, true );
+    add_image_size( 'video_thumb', 640, 360, true );
     /* Pinegrow generated Image Sizes End */
     
     /*
@@ -110,7 +111,8 @@ function nukage2020_custom_image_sizes_names( $sizes ) {
     /* Pinegrow generated Image Sizes Names Begin */
 
     return array_merge( $sizes, array(
-        'gallery_thumb' => __( 'Gallery Thumb' )
+        'gallery_thumb' => __( 'Gallery Thumb' ),
+        'video_thumb' => __( 'video_thumb' )
     ) );
 
     /* Pinegrow generated Image Sizes Names End */
