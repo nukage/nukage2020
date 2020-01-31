@@ -6,7 +6,9 @@
 /* FONTS */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800|Raleway:100,300,400,600,700,800,900|Oswald:200,300,400,500,600,700&display=swap');
  
-
+.openmic-main{
+    background-image: url('../images/openmic/mixer.jpg');
+}
 
 #bio {
 
@@ -16,11 +18,9 @@
     background-image: url('../images/nukage-gradientbg6.jpg');
 
   }
-
   .press-bg{
     background-image: url('../images/nukage-gradientbg4.jpg');
   }
-
   .videos-bg{
     background-image: url('../images/gradientbg7.jpg');
   }
@@ -28,7 +28,6 @@
     background-image: url('../images/nukage-gradientbg5.jpg');
    
 }
- 
 
 .qs-bg {
     background-image: url('../images/gradientbg8.jpg');

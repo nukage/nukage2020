@@ -157,6 +157,15 @@ $(function () {
             $('.rotator').rotaterator({fadeSpeed:500, pauseSpeed:3000});
      });
     }, 
+    downloadBox: function() {
+     $('#email-download-togg').on('click', function (e) { 
+   
+       console.log('a thing!');
+       $('#download-box').addClass('download-box-shown').removeClass('download-box-hidden');
+       $(this).addClass('btn-go-away');
+
+     });
+    },
         mainModal: function (elem, modalBG, btn, modalContent) {
             // console.log('Malchimpmodal Loaded')
             $(elem).on('click', function (e) {
@@ -202,6 +211,7 @@ $(function () {
     nukage.loadAnimate('.fade-anim', 0, 200, 'fade-in' );
     nukage.loadAnimate('.slide-in-anim', 1000, 100, 'slide-in-blurred-bottom' );
     nukage.mainModal('.sign-up-nav-link', '.modal-mc-bg', '.modal-close', '.modal-mc');
+    nukage.downloadBox();
     nukage.combinedScroll();
     nukage.headroom();
     nukage.textRotator();

@@ -681,23 +681,31 @@ video {
 
 @media (min-width: 768px) {
 
-.qs-bg, .contact-bg, .press-bg, .videos-bg, .music-bg, .bio-bg, .photos-bg {
+.qs-bg, .contact-bg, .press-bg, .videos-bg, .music-bg, .bio-bg, .photos-bg, .openmic-main {
     background-attachment: fixed;
 
     background-size: cover;
   }
 }
 
-.qs-bg, .contact-bg, .press-bg, .videos-bg, .music-bg, .bio-bg, .photos-bg {
+.qs-bg, .contact-bg, .press-bg, .videos-bg, .music-bg, .bio-bg, .photos-bg, .openmic-main {
   background-size:  auto;
   background-position: center  center;
   margin:0;
   padding:0;
 }
 
+.openmic-overlay{
+  background: rgba(0, 39, 3, 0.795);
+}
+
 .press-overlay{
-  background: rgba(4, 2, 20, 0.397);
+  background: rgba(0, 48, 28, 0.397);
   background-image: url(../images/overlay-pattern3.png);
+}
+
+.signup-overlay  {
+  background: rgba(0, 31, 26, 0.644);
 }
 
 .img-overlay {
@@ -970,6 +978,11 @@ h1, h2, h3, h4, h5 {
           filter:  grayscale(100%) ;
 }
 
+.filter-blur{
+  -webkit-filter: blur(5px) ;
+          filter: blur(5px) ;
+}
+
 .gray:hover{
   -webkit-filter:  grayscale(0%) ;
           filter:  grayscale(0%) ;
@@ -1085,7 +1098,7 @@ h1, h2, h3, h4, h5 {
   flex-wrap: wrap;
 }
 
-.wpcf7 form input[type="text"], .wpcf7 form input[type="email"]  {
+.wpcf7 form input[type="text"], .wpcf7 form input[type="email"], .wpcf7 form input[type="tel"]  {
     margin: 0.5rem;
     width: 100%;
     border-color: #cbd5e0;
@@ -1154,6 +1167,92 @@ h1, h2, h3, h4, h5 {
       background-color: #D81853;
       color: #000;
     }
+
+#signup .wpcf7 form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-family: "Oswald";
+    text-transform: none;
+  }
+
+#signup .wpcf7 form input[type="submit"] {
+      font-family: "Oswald";
+      transition: all 300ms;
+      font-weight: 800;
+      text-transform: uppercase;
+      display: block;
+      width: 100%;
+      border-width: 1px;
+      border-color: #D81853;
+      background-color: #80003;
+      color: #D81853;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-top: 0.25rem;
+      padding-bottom: 0.25rem;
+      cursor: pointer;
+      font-weight: 100;
+      font-size: 1.25rem;
+      background-color: transparent;
+    }
+
+#signup .wpcf7 form input[type="submit"]:hover{
+      background-color: #D81853;
+      color: #000;
+    }
+
+#signup .wpcf7 form label {
+      padding-left: 0.5rem
+    }
+
+#signup .wpcf7 form input[type="text"], #signup .wpcf7 form input[type="email"], #signup .wpcf7 form input[type="tel"] {
+      margin: 0;
+      text-transform: none;
+    }
+
+#signup .wpcf7 form textarea {
+      margin: 0;
+      text-transform: none;
+    }
+
+#signup .wpcf7 form .vc_col-sm-12, #signup .wpcf7 form .vc_col-sm-6 {
+      padding-top: 0.5rem
+    }
+
+#signup .wpcf7 form .vc_col-sm-12 {
+      width: 100%
+    }
+
+#signup .wpcf7 form .vc_col-sm-6 {
+      width:49%;
+    }
+
+/* RELEASE SINGLE PAGES */
+
+#download-box {
+  transition: 1200ms all;
+}
+
+.download-box-hidden{
+  opacity: 0;
+  height:0px;
+  overflow:none;
+  margin-bottom:-10px;
+  pointer-events:none;
+}
+
+.download-box-shown{
+  height:280px;
+  opacity: 100;
+  overflow:none;
+}
+
+.btn-go-away {
+  opacity:0 !important;
+  pointer-events:none;
+}
 
 @media (min-width: 1024px) {
   .wpcf7 form .input-text-wrapper {
