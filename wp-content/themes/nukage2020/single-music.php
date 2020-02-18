@@ -78,7 +78,7 @@
                     ?>
                     <li class="flex flex-row justify-between my-2 py-3 border-solid border-b border-gray  ">
                         <img src="<?php echo $logo ?>" alt="" class="w-1/3 ml-2 h-10"> 
-                        <a href="<?php echo the_sub_field('link') ?>" class="h-8 px-2 py-1 bg-black rounded-lg text-white uppercase hover:bg-risered trans cursor-pointer  "> <?php echo the_sub_field('button_text') ?> <?php echo $icon ?> </a>
+                        <a href="<?php echo the_sub_field('link') ?>" class="h-8 px-2 py-1 bg-black rounded-lg text-white uppercase hover:bg-risered trans cursor-pointer  ">  <?php echo the_sub_field('button_text') ?> <?php echo $icon ?> </a>
                     </li>
                     <?php
                         endwhile;

@@ -10,7 +10,7 @@
         <meta content="Pinegrow Web Editor" name="generator">
         <?php wp_head(); ?>
     </head>
-    <body class="<?php echo implode(' ', get_body_class()); ?>">
+    <body class="s1 raleway text-white <?php echo implode(' ', get_body_class()); ?>">
         <?php if( function_exists( 'wp_body_open' ) ) wp_body_open(); ?>
-        <div class="body-wrapper">
+        <div class="body-wrapper ">
             <div class="main-content">

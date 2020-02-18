@@ -1,135 +1,6 @@
 <?php get_header(); ?>
 
 <div class="bg-overlay ">
-    <section id="openmic-top" class="">
-        <div class="openmic-overlay py-40">
-            <div class="container mx-auto">
-                <h1 class="font-black oswald text-6xl text-white text-center"><?php _e( 'ELECTRONIC OPEN SHOWCASE', 'nukage2020' ); ?></h1>
-                <h2 class="text-4xl text-green-600 text-center"><?php _e( 'PRESENTED BY IHEARTPRODUCERS, 343 LABS & SCRATCH DJ ACADEMY', 'nukage2020' ); ?></h2>
-                <p class="mt-8 text-center "> <?php _e( 'Open Decks DJ Night', 'nukage2020' ); ?><br><?php _e( 'Saturday January 18, 2019 6pm – 10pm @ 343 Labs/Scratch DJ Academy', 'nukage2020' ); ?><br><?php _e( '32 Cooper Sq. New York, NY 10003', 'nukage2020' ); ?> </p>
-                <div class="text-center">
-                    <a href="https://www.meetup.com/NYC-Electronic-Music-Producers/" target="_blank" class="inline-block p-4 bg-green-600 uppercase oswald font-black rounded-lg trans hover:bg-green-900 mr-4"><?php _e( 'Join Our Meetup Group', 'nukage2020' ); ?></a> 
-                    <a href="https://www.facebook.com/groups/1419461328304642/" target="_blank" class="inline-block p-4 bg-green-600 uppercase oswald font-black rounded-lg trans hover:bg-green-900"><?php _e( 'Join Our Facebook Group', 'nukage2020' ); ?></a> 
-                </div>
-                <div class="my-20">
-                    <p><?php _e( 'Thanks for your interest in playing one of our Open Mic events. Our electronic open mic is a showcase of local musicians who perform their original music.&nbsp; We welcome performers, producers, and DJ’s, and we’re looking for electronic musicians who want to showcase their original music.', 'nukage2020' ); ?></p>
-                    <p><!-- /wp:paragraph --></p>
-                    <p><!-- wp:paragraph --><?php _e( 'This is an open mic in the sense that we’re open to anyone who wants to play, but we do create the schedule ahead of time, so you can’t show up the day of the show without signing up and expect to play.&nbsp; This is to minimize confusion the day of the show, and we don’t want people showing up thinking they can play, and then not being able to accommodate them.&nbsp; Slots are given on a first-come-first-serve basis, so in order to ensure you have a slot, sign up as soon as the even is announced.', 'nukage2020' ); ?></p>
-                    <p><!-- /wp:paragraph --></p>
-                    <p><!-- wp:paragraph --><?php _e( 'We do our best to promote the events through our own channels, but if we want to make these events as successful as possible, every artist who plays should be inviting their friends and promoting via their own social media channels or mailing list, so keep that in mind.', 'nukage2020' ); ?></p>
-                    <p><!-- /wp:paragraph --></p>
-                    <p><!-- wp:paragraph --><?php _e( 'When you play one of our events, you will need to set up fairly quickly because we want to fit as many performers in as possible.You should plan accordingly and perhaps simplify your setup if it takes a long time to set up.', 'nukage2020' ); ?></p>
-                    <p><!-- /wp:paragraph --><!-- /wp:shortcode --></p>
-                </div>
-                <div class="wpb_wrapper">
-                    <h2><?php _e( 'FREQUENTLY ASKED QUESTIONS', 'nukage2020' ); ?></h2>
-                    <h3><?php _e( 'If this is an open showcase, can I just come the day of the event and play?', 'nukage2020' ); ?></h3>
-                    <p><?php _e( 'Nope, you absolutely must sign up ahead of time, using the form on this site.', 'nukage2020' ); ?></p>
-                    <h3><?php _e( 'Will I be guaranteed a slot if I sign up?', 'nukage2020' ); ?></h3>
-                    <p><?php _e( 'Right now, we have roughly 8 slots available per event, and on average we have twice that many sign ups each month, so not everyone who signs up will be able to play.', 'nukage2020' ); ?></p>
-                    <h3><?php _e( 'When will I know if I have a slot?', 'nukage2020' ); ?></h3>
-                    <p><?php _e( 'We generally try to send the schedule out approximately 7 or more days before the event.', 'nukage2020' ); ?></p>
-                    <h3><?php _e( 'Is there anything I can do to increase my chances?', 'nukage2020' ); ?></h3>
-                    <p><?php _e( 'If you help out by promoting our events heavily on social media or volunteer to help with the meet up, it will increase the likelihood you’ll be prioritized in scheduling. Speak with an organizer for more specifics on this.', 'nukage2020' ); ?></p>
-                    <h3><?php _e( 'Do I need to play original music?', 'nukage2020' ); ?></h3>
-                    <p><?php _e( 'This is a showcase for artists, if you are a DJ and you don’t make original music, sorry but this event is not for you.', 'nukage2020' ); ?></p>
-                    <h3><?php _e( 'What if I have confirmed my time slot, but something came up and I can’t play?', 'nukage2020' ); ?></h3>
-                    <p><?php _e( 'Let us know as soon as possible. If it’s the day of the show,', 'nukage2020' ); ?> <strong><?php _e( 'TEXT OR CALL, DO NOT EMAIL!!!', 'nukage2020' ); ?></strong> <?php _e( 'One of the organizers’ phone numbers will be in the confirmation email for your slot.&nbsp; If you don’t let us know according to this standard, you won’t be able to be scheduled for any future events.&nbsp; We have had a really big problem with people not showing up for their slots so we had to put this policy in place.', 'nukage2020' ); ?></p>
-                    <h3><?php _e( 'Can I bring particular equipment?', 'nukage2020' ); ?></h3>
-                    <p><?php _e( 'The main consideration here is setup time, if your equipment takes more than 10 minutes to set up, it’s probably not appropriate for this event, but it’s also dependent on your ability to set up quickly. Ask an organizer for more specifics on this.', 'nukage2020' ); ?></p>
-                    <h3><?php _e( 'Can I perform using the existing equipment at 343 Labs / Scratch DJ Academy?', 'nukage2020' ); ?></h3>
-                    <p><?php _e( 'Since we accommodate electronic performers of all types and we need setup times to be as quick as possible, we encourage people to bring their own DJ controllers that are easy to set up. We don’t have enough space to leave DJ equipment set up throughout the event, and it’s heavy and takes more than 5 minutes to set up and break down.', 'nukage2020' ); ?></p>
-                    <h3><?php _e( 'How long do I have to set up?', 'nukage2020' ); ?></h3>
-                    <p><?php _e( 'Your set length includes any time you need to set up, so if your set is 20 minutes long and you need 10 minutes to set up, you will only have the remaining 10 minutes to perform. This is the only way we can keep the night moving along, sorry!', 'nukage2020' ); ?> <strong><?php _e( 'Practice setting up and breaking down at home, and time yourself so you know how long it takes!', 'nukage2020' ); ?></strong></p>
-                    <h3><?php _e( 'How do I reach the organizers?', 'nukage2020' ); ?></h3>
-                    <p><?php _e( 'Email:', 'nukage2020' ); ?> <a href="mailto:tom@iheartproducers.com"><?php _e( 'tom@iheartproducers.com', 'nukage2020' ); ?></a></p>
-                    <p>&nbsp;</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="signup">
-        <div class="signup-bg ">
-            <div class="signup-overlay pt-16 pb-32">
-                <h3 class="section-title   pt-24 text-red-500"><?php _e( 'SIGN UP', 'nukage2020' ); ?></h3>
-                <div class="header-strips-1 bg-red-600"></div>
-                <div class="container mx-auto flex md:flex-row flex-col max-w-5xl pb-24">
-                    <div id="ut_inner_column_5e28739fe3abe" class="vc_column-inner ">
-                        <div class="wpb_wrapper">
-                            <div class="wpb_content_element ">
-                                <div role="form" class="wpcf7" id="wpcf7-f375-p6-o2" lang="en-US" dir="ltr">
-                                    <div class="screen-reader-response"></div>
-                                    <form action="<?php echo esc_url( get_template_directory_uri() ); ?>/#wpcf7-f375-p6-o2" method="post" class="wpcf7-form" novalidate="novalidate">
-                                        <div style="display: none;">
-                                            <input type="hidden" name="_wpcf7" value="375">
-                                            <input type="hidden" name="_wpcf7_version" value="5.1.6">
-                                            <input type="hidden" name="_wpcf7_locale" value="en_US">
-                                            <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f375-p6-o2">
-                                            <input type="hidden" name="_wpcf7_container_post" value="6">
-                                        </div>
-                                        <header id="ut_header_5da8b5ffacc09" class="section-header ut-no-title-linebreak-mobile ut-no-lead-linebreak-mobile pt-style-6 header-left">
-                                            <h2 style="color: red; font-family: Oswald; font-size: 40px;" class="section-title "><span><?php _e( 'SIGN UP TO BE NOTIFIED OF OUR NEXT ONE!', 'nukage2020' ); ?></span></h2>
-                                            <div data-delay="0" class="lead ">
-                                                <p style="color:red;font-family: Oswald; padding-bottom:20px;"><?php _e( 'Sign ups are currently closed for open mic events, and sign ups often fill up the day we announce an event! Fill out this form and you will be notified as soon as we open up submissions for the next one.', 'nukage2020' ); ?></p>
-                                            </div>
-                                        </header>
-                                        <div class="vc_col-sm-6">
-                                            <?php _e( 'First Name *', 'nukage2020' ); ?>
-                                            <br>
-                                            <span class="wpcf7-form-control-wrap first-name"><input type="text" name="first-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" style="background-image: url("<?php echo esc_url( get_template_directory_uri() ); ?>/data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAfBJREFUWAntVk1OwkAUZkoDKza4Utm61iP0AqyIDXahN2BjwiHYGU+gizap4QDuegWN7lyCbMSlCQjU7yO0TOlAi6GwgJc0fT/fzPfmzet0crmD7HsFBAvQbrcrw+Gw5fu+AfOYvgylJ4TwCoVCs1ardYTruqfj8fgV5OUMSVVT93VdP9dAzpVvm5wJHZFbg2LQ2pEYOlZ/oiDvwNcsFoseY4PBwMCrhaeCJyKWZU37KOJcYdi27QdhcuuBIb073BvTNL8ln4NeeR6NRi/wxZKQcGurQs5oNhqLshzVTMBewW/LMU3TTNlO0ieTiStjYhUIyi6DAp0xbEdgTt+LE0aCKQw24U4llsCs4ZRJrYopB6RwqnpA1YQ5NGFZ1YQ41Z5S8IQQdP5laEBRJcD4Vj5DEsW2gE6s6g3d/YP/g+BDnT7GNi2qCjTwGd6riBzHaaCEd3Js01vwCPIbmWBRx1nwAN/1ov+/drgFWIlfKpVukyYihtgkXNp4mABK+1GtVr+SBhJDbBIubVw+Cd/TDgKO2DPiN3YUo6y/nDCNEIsqTKH1en2tcwA9FKEItyDi3aIh8Gl1sRrVnSDzNFDJT1bAy5xpOYGn5fP5JuL95ZjMIn1ya7j5dPGfv0A5eAnpZUY3n5jXcoec5J67D9q+VuAPM47D3XaSeL4AAAAASUVORK5CYII="); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;"></span>
-                                        </div>
-                                        <div class="vc_col-sm-6">
-                                            <?php _e( 'Last Name *', 'nukage2020' ); ?>
-                                            <br>
-                                            <span class="wpcf7-form-control-wrap last-name"><input type="text" name="last-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false"></span>
-                                        </div>
-                                        <div class="vc_col-sm-6">
-                                            <?php _e( 'Performance Name (If different)', 'nukage2020' ); ?>
-                                            <br>
-                                            <span class="wpcf7-form-control-wrap performance-name"><input type="text" name="performance-name" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false"></span>
-                                        </div>
-                                        <div class="vc_col-sm-6">
-                                            <?php _e( 'Email *', 'nukage2020' ); ?>
-                                            <br>
-                                            <span class="wpcf7-form-control-wrap email"><input type="email" name="email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false"></span>
-                                        </div>
-                                        <div class="vc_col-sm-12">
-                                            <?php _e( 'Phone Number *', 'nukage2020' ); ?>
-                                            <br>
-                                            <span class="wpcf7-form-control-wrap phone-number"><input type="tel" name="phone-number" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel" aria-required="true" aria-invalid="false"></span>
-                                        </div>
-                                        <div class="vc_col-sm-12">
-                                            <?php _e( 'Website / Social Media Links For Your Music (List multiple if you have them)', 'nukage2020' ); ?>
-                                            <br>
-                                            <span class="wpcf7-form-control-wrap website"><textarea name="website" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false"></textarea></span>
-                                        </div>
-                                        <div class="vc_col-sm-12">
-                                            <?php _e( 'Please describe your live act.', 'nukage2020' ); ?>
-                                            <br>
-                                            <span class="wpcf7-form-control-wrap description"><textarea name="description" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false"></textarea></span>
-                                        </div>
-                                        <div class="vc_col-sm-12">
-                                            <?php _e( 'How did you find out about us?', 'nukage2020' ); ?>
-                                            <br>
-                                            <span class="wpcf7-form-control-wrap how-found"><textarea name="how-found" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false"></textarea></span>
-                                        </div>
-                                        <div class="vc_col-sm-12">
-                                            <input type="submit" value="Send" class="wpcf7-form-control wpcf7-submit">
-                                            <span class="ajax-loader"></span>
-                                            <p></p>
-                                            <input type="hidden" name="event-signup" value="false" class="wpcf7-form-control wpcf7-hidden">
-                                            <br>
-                                            <div class="wpcf7-response-output wpcf7-display-none"></div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     <section id="quick-stats" class="oswald md:text-xl">
         <div class="qs-bg">
             <div class="  px-5   pt-48 pb-32">
@@ -410,6 +281,33 @@
     <!-- <section id="logos">
         <h3 class="section-title ">Logos &amp; Banners</h3>
     </section> -->
+    <section id="contact">
+        <div class="contact-bg ">
+            <div class="contact-overlay pt-16 pb-32">
+                <h3 class="section-title   pt-24"><?php _e( 'Contact', 'nukage2020' ); ?></h3>
+                <div class="header-strips-1"></div>
+                <div class="container mx-auto flex md:flex-row flex-col max-w-5xl pb-24">
+                    <!-- <div class="p-1 md:w-1/2 w-full flex-grow flex flex-col hidden ">
+                        <h4 class="contact-title  leading-loose text-2xl text-center font-hairline uppercase py-2 border border-blue-500 rounded-t-lg text-blue-500 ">Producer <i class="fas fa-circle "></i> Performer <i class="fas fa-circle"></i> DJ <i class="fas fa-circle"></i> Guitarist</h4>
+                        <div class="flex flex-row flex-wrap  oswald leading-loose font-hairline border border-blue-500 flex-grow ">
+                            <div class=" md:w-1/2 w-full flex items-center  ">
+                                <img class="mx-auto p-5 md:block hidden" src="images/Nukage-Headshot.png">
+                            </div>
+                            <div class=" md:w-1/2 w-full   p-3 mb-3 md:text-left text-center "> I am inspired by producing meaningful content; making deep connections and helping others achieve their own level of personal greatness via my music, session singing services and various entrepreneurial endeavors. </div>
+                            <div class="w-full text-center">Feel free to reach out to me any time! I'd love to hear from you :)</div>
+                        </div>
+                    </div> -->
+                    <div class="p-1  w-full px-5 oswald uppercase">
+                        <div style="border border-gray-200 rounded-lg">
+                            <div class="wpcf7   pr-4">
+                                <?php echo do_shortcode('[contact-form-7 id="62" title="Contact form 1"]') ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>                
 
 <?php get_footer(); ?>
