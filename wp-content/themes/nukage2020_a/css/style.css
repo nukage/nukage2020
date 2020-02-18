@@ -1,0 +1,89 @@
+
+  
+
+
+
+/* FONTS */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800|Raleway:100,300,400,600,700,800,900|Oswald:200,300,400,500,600,700&display=swap');
+ 
+.openmic-main{
+    background-image: url('../images/openmic/mixer.jpg');
+}
+
+#bio {
+
+
+  }
+.contact-bg{
+    background-image: url('../images/nukage-gradientbg6.jpg');
+
+  }
+  .press-bg{
+    background-image: url('../images/nukage-gradientbg4.jpg');
+  }
+  .videos-bg{
+    background-image: url('../images/gradientbg7.jpg');
+  }
+.photos-bg{
+    background-image: url('../images/nukage-gradientbg5.jpg');
+   
+}
+
+.qs-bg {
+    background-image: url('../images/gradientbg8.jpg');
+}
+.bio-bg{
+    /* background-image: url('../images/CATS-3-JustBG.jpg');  */
+    /* background-image: url('../images/nukage-blurbg-1.jpg'); */
+    background-image: url('../images/nukage-gradientbg3.jpg');
+}
+.music-bg {
+    /* background-image: url('../images/lit-blurred-bg.jpg'); */
+    background-image: url('../images/nukage-gradientbg2.jpg');
+
+    
+}
+p {
+    margin-bottom:1rem;
+    /* font-weight:200; */
+    line-height:2.5rem;
+}
+
+body{
+    /* font-size:18px; */
+    text-rendering: geometricPrecision;
+}
+ 
+
+.s1 {
+    /* background-image: url(../images/mixer.jpg) !important; */
+    background-attachment: fixed!important;
+    background-size: cover;
+    background-color:black;
+}
+
+.s1 .container {
+    /* max-width:1000px; */
+}
+
+.bg-trans-bk{background: rgba(0,0,0,.5);}
+
+
+
+ 
+
+/* .quick-list-holder ul {
+    margin:0;padding:0;
+} */
+
+.quick-list-holder ul li{
+    padding:.5rem;
+    border: 1px solid rgba(255,255,255,.2);
+    /* font-weight: 100; */
+
+}
+.quick-list-holder ul li span {
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
