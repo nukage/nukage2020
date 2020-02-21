@@ -10,10 +10,20 @@
         <meta content="Pinegrow Web Editor" name="generator">
         <?php wp_head(); ?>
     </head>
+    <?php
+        $headershow = 1 ; 
+        
+        if (get_field('hide_header') == true ) {
+            $headershow = 0 ;
+        };
+        if (get_post_type() == 'music') {
+            $headershow = 0 ;
+        };
+    ?>
     <body class="s1 raleway text-white <?php echo implode(' ', get_body_class()); ?>">
         <?php if( function_exists( 'wp_body_open' ) ) wp_body_open(); ?>
         <?php
-            if ( get_field('hide_header') !== true ) :     
+            if ( $headershow == 1 )  :     
         ?>
         <div class="navbar w-full fixed z-10 ">
             <div class="nav-main-menu bg-black">
@@ -57,6 +67,7 @@
         </div>
         <?php
             endif;  
+            
         ?>
         <div class="body-wrapper ">
             <div class="main-content">

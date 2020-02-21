@@ -60,6 +60,19 @@
                          $logo = get_template_directory_uri() . '/images/soundcloud.png';
                          elseif ( get_sub_field('logo')  === 'youtube' )  :
                          $logo = get_template_directory_uri() . '/images/youtube.png';
+                         elseif ( get_sub_field('logo')  === 'applemusic' )  :
+                         $logo = get_template_directory_uri() . '/images/applemusic.svg';
+                         elseif ( get_sub_field('logo')  === 'googleplay' )  :
+                         $logo = get_template_directory_uri() . '/images/google_play.png';
+                         elseif ( get_sub_field('logo')  === 'tidal' )  :
+                         $logo = get_template_directory_uri() . '/images/tidal.svg';
+                         elseif ( get_sub_field('logo')  === 'deezer' )  :
+                         $logo = get_template_directory_uri() . '/images/deezer.svg';
+                         elseif ( get_sub_field('logo')  === 'napster' )  :
+                         $logo = get_template_directory_uri() . '/images/napster.svg';
+                         elseif ( get_sub_field('logo')  === 'amazon' )  :
+                         $logo = get_template_directory_uri() . '/images/amazon.svg';
+
                          endif;
 
                          $icon = '<svg class="inline fa-play-circle w-4" aria-hidden="true" data-prefix="fas" data-icon="play-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512" data-fa-i2svg="">
