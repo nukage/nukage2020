@@ -14,7 +14,7 @@
                     <!-- Begin Mailchimp Signup Form -->
                     <!-- <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css"> -->
                     <div id="mc_embed_signup">
-                        <form action="https://nukagemusic.us17.list-manage.com/subscribe/post?u=748d58fe44a6b6eb6bba2b7ae&amp;id=9ce2d4839d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate w-3/4 m-auto" target="_blank" novalidate>
+                        <form action="https://nukagemusic.us17.list-manage.com/subscribe/post?u=748d58fe44a6b6eb6bba2b7ae&amp;id=126bbd5e8b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate w-3/4 m-auto" target="_blank" novalidate>
                             <div id="mc_embed_signup_scroll">
                                 <div class="indicates-required">
                                     <span class="asterisk">*</span> 

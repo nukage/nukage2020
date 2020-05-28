@@ -42,7 +42,8 @@
                             <?php echo the_field('download_form') ?>
                         </div>
                         <!-- Begin Mailchimp Signup Form -->
-                        <!-- <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css"> -->                                         
+                        <!-- <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css"> -->
+                        <style>.download-box-shown {height:450px;}</style>                                                                                  
                         <!--End mc_embed_signup-->
                     </div>
                     <?php
