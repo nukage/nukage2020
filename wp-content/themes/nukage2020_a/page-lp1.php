@@ -13,7 +13,7 @@
                 <div class="container mx-auto flex flex-row   bg-white px-10  max-w-5xl">
                     <div class="w-2/3  pt-8 ">
                         <h1 class="text-4xl uppercase     leading-tight text-center font-black "><span class="text-3xl"><?php _e( 'If you\'re looking to embark on a journey, turn up the bass and JOIN us for a ride...', 'nukage2020_a' ); ?></span><br> <?php _e( '"futuristic, uplifting dubstep that is as vibrant as it is monumental. A genre-defying blitz on the head, heart and soul."', 'nukage2020_a' ); ?></h1>
-                        <h2 class="text-black text-center mt-3 mb-5 text-2xl"><?php _e( 'DOWNLOAD HIS LATEST REMIX OF ARMNHMR FOR FREE NOW!', 'nukage2020_a' ); ?></h2>
+                        <h2 class="text-black text-center mt-3 mb-5 text-2xl"><?php _e( 'DOWNLOAD HIS LATEST SINGLE FOR FREE NOW!', 'nukage2020_a' ); ?></h2>
                         <div class="flex flex-row">
                             <div class="w-1/2  fade-anim pr-5">
                                 <img class=" " src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/hs4-cropped.jpg">
