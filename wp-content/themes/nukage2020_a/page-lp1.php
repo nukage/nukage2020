@@ -12,31 +12,23 @@
             <div class="  px-5  pb-32">
                 <div class="container mx-auto flex flex-row   bg-white px-10  max-w-5xl">
                     <div class="w-2/3  pt-8 ">
-                        <h1 class="text-4xl uppercase     leading-tight text-center font-black "><span class="text-3xl"><?php _e( 'If you\'re looking to embark on a journey, turn up the bass and JOIN us for a ride...', 'nukage2020_a' ); ?></span><br> <?php _e( '"futuristic, uplifting dubstep that is as vibrant as it is monumental. A genre-defying blitz on the head, heart and soul."', 'nukage2020_a' ); ?></h1>
-                        <h2 class="text-black text-center mt-3 mb-5 text-2xl"><?php _e( 'DOWNLOAD HIS LATEST SINGLE FOR FREE NOW!', 'nukage2020_a' ); ?></h2>
+                        <h1 class="text-4xl uppercase     leading-tight text-center font-black "><?php echo the_field('headline1') ?></h1>
+                        <h2 class="text-black text-center mt-3  text-4xl"><?php echo the_field('headline2') ?></h2>
+                        <h3 class="text-black text-center mb-5 text-2xl"><?php echo the_field('headline3') ?></h3>
                         <div class="flex flex-row">
                             <div class="w-1/2  fade-anim pr-5">
-                                <img class=" " src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/hs4-cropped.jpg">
+                                <?php echo PG_Image::getPostImage( null, 'medium', array(
+                                        'class' => ' '
+                                ), 'both', null ) ?>
                             </div>
                             <div class="w-1/2 text-black text-md uppercase">
-                                <?php _e( 'This Song Slaps - “Mind-blowing… monstrous and speaker-crushing“', 'nukage2020_a' ); ?> 
-                                <div class="h-3"> </div>
-                                <?php _e( 'Kolourbridge - “Nukage drops a collection of beats that are as seismic as they are meticulously well-written.”', 'nukage2020_a' ); ?> 
-                                <div class="h-3"> </div>
-                                <?php _e( 'Your EDM - “Gnarly basslines suitable for actual warfare…this should be able to elicit more than just a little headbanging”', 'nukage2020_a' ); ?>
-                                <div class="h-3"> </div>
-                                <!--                                                 
-                                EDM Sauce - “A genre-defying ballistic blitz on the head, heart, and soul. You might even call the experience religious.”
-                                <div class="h-3"> </div> -->
+                                <?php echo the_field('quotes') ?>
                             </div>
                         </div>
                         <div class="text-black raleway text-base mt-5">
-                            <p class=" leading-snug"><?php _e( 'Inspired from a young age by the sounds of synthesizers and the "wall of sound" of post-hardcore, Tom Myruski aka Nukage, set out to create a unique sound combining two things: the complex beats &amp; hugely thick synths of dubstep, and the melodic stylings of progressive rock and post-hardcore.', 'nukage2020_a' ); ?></p>
-                            <p class=" leading-snug"><?php _e( 'Somewhere along the way, he encountered dubstep  via artists like Skrillex, Bassnectar, and Kill the Noise and he was hooked. Within only a few months of releasing his first dubstep remix, he had his first hit with Zedd – Clarity (Nukage Remix). It was featured on ThisSongSlaps and was listed as one of the top remixes for that song. Since then, Nukage has been turning twisting, filtered bass and meticulously crafted beats into undeniable, funky filth.', 'nukage2020_a' ); ?></p> 
-                            <p class=" leading-snug"><?php _e( 'For a limited time, we are giving away the latest single, a remix of melodic dubstep legends ARMNHMR. Just enter your name and email address in the right hand side of this site and you will be immediately sent the download link.', 'nukage2020_a' ); ?> </p>
-                            <p class=" leading-snug"><?php _e( 'So enter your name and address now now, and brace yourself. Because as EDM Sauce recently wrote, his music is “a genre-defying ballistic blitz on the head, heart, and soul.”', 'nukage2020_a' ); ?></p>
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/SupportFrom.png">
+                            <?php echo the_field('body_text') ?>
                         </div>
+                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/SupportFrom.png">
                     </div>
                     <div class="w-1/3">
                         <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/arrow-basic.webp" alt="">
