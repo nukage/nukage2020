@@ -6,7 +6,7 @@
             <div class="  px-5   pt-48 pb-32">
                 <div class="container mx-auto flex  md:flex-row flex-col py-10">
                     <div class=" md:w-1/3 w-1/2 m-auto flex flex-row items-center  md:mb-0 mb-10  ">
-                        <img class="mx-auto rounded-full fade-anim shadow1" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/headshot-5.jpg">
+                        <img class="mx-auto rounded-full fade-anim shadow1" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/hs5-cropped-colored.jpg">
                     </div>
                     <div class="md:w-2/3 w-full container flex flex-col quick-list-holder md:pl-16   items-center justify-center">
                         <div class="uppercase text-gray-500 mb-4 fade-anim">
